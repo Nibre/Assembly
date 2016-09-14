@@ -95,8 +95,8 @@
 			<tagRef name="Child Object" offset="0xC" visible="true" />
 		</reflexive>
 		<int32 name="Instance Group Index" offset="0x2C" visible="true" />
-		<undefined name="Unknown" offset="0x30" visible="false" />
-		<undefined name="Unknown" offset="0x34" visible="false" />
+		<undefined name="Useless Padding" offset="0x30" visible="false" />
+		<undefined name="Useless Padding" offset="0x34" visible="false" />
 	</reflexive>
 	<reflexive name="Instance Groups" offset="0x70" visible="true" entrySize="0x18">
 		<stringid name="Name" offset="0x0" visible="true" />
@@ -212,7 +212,7 @@
 		<stringid name="Global Indirect Material Name" offset="0x4" visible="true" />
 		<int16 name="Indirect Damage Section" offset="0x8" visible="true" />
 		<int16 name="Useless Padding" offset="0xA" visible="false" />
-		<undefined name="Unknown" offset="0xC" visible="false" />
+		<undefined name="Useless Padding" offset="0xC" visible="false" />
 		<enum8 name="Collision Damage Reporting Type" offset="0x10" visible="true">
 			<option name="Guardians" value="0x0" />
 			<option name="Falling Damage" value="0x1" />
@@ -531,7 +531,7 @@
 			<stringid name="Damage Constraint Name" offset="0x4" visible="true" />
 			<stringid name="Damage Constraint Group Name" offset="0x8" visible="true" />
 			<float32 name="Group Probability Scale" offset="0xC" visible="true" />
-			<enum16 name="Type" offset="0x10" visible="true">
+			<enum16 name="Constraint Type" offset="0x10" visible="true">
 				<option name="Hinge" value="0x0" />
 				<option name="Limited Hinge" value="0x1" />
 				<option name="Ragdoll" value="0x2" />
@@ -539,15 +539,15 @@
 				<option name="Ball and Socket" value="0x4" />
 				<option name="Prismatic" value="0x5" />
 			</enum16>
-			<int16 name="Index" offset="0x12" visible="True" />
+			<int16 name="Constraint Index" offset="0x12" visible="True" />
 		</reflexive>
 	</reflexive>
 	<reflexive name="Targets" offset="0x94" visible="false" entrySize="0x20">
 		<stringid name="Marker Name" offset="0x0" visible="true" />
 		<float32 name="Size" offset="0x4" visible="true" />
 		<degree name="Cone Angle" offset="0x8" visible="false" />
-		<int16 name="Damage Section" offset="0xC" visible="true" />
-		<int16 name="Variant" offset="0xE" visible="true" />
+		<int16 name="Damage Section Index" offset="0xC" visible="true" />
+		<int16 name="Variant Index" offset="0xE" visible="true" />
 		<float32 name="Targeting Relevance" offset="0x10" visible="true" />
 		<undefined name="Unknown" offset="0x14" visible="false" />
 		<bitfield32 name="Flags" offset="0x18" visible="true">
@@ -586,27 +586,20 @@
 		</bitfield32>
 		<float32 name="Lock-On Distance" offset="0x1C" visible="true" />
 	</reflexive>
-	<reflexive name="Collision Regions" offset="0xA0" visible="true" entrySize="0x14">
+	<reflexive name="Regions" offset="0xA0" visible="true" entrySize="0x14">
 		<stringid name="Name" offset="0x0" visible="true" />
 		<int8 name="Collision Region Index" offset="0x4" visible="true" />
 		<int8 name="Physics Region Index" offset="0x5" visible="true" />
-		<int8 name="Unknown" offset="0x6" visible="false" />
-		<int8 name="Unknown" offset="0x7" visible="false" />
+		<int8 name="Useless Padding" offset="0x6" visible="false" />
+		<int8 name="Useless Padding" offset="0x7" visible="false" />
 		<reflexive name="Permutations" offset="0x8" visible="true" entrySize="0x8">
 			<stringid name="Name" offset="0x0" visible="true" />
 			<bitfield8 name="Flags" offset="0x4" visible="true">
 				<bit name="Cannot Be Chosen Randomly" index="0" />
-				<bit name="Bit 1" index="1" />
-				<bit name="Bit 2" index="2" />
-				<bit name="Bit 3" index="3" />
-				<bit name="Bit 4" index="4" />
-				<bit name="Bit 5" index="5" />
-				<bit name="Bit 6" index="6" />
-				<bit name="Bit 7" index="7" />
 			</bitfield8>
 			<int8 name="Collision Permutation Index" offset="0x5" visible="true" />
 			<int8 name="Physics Permutation Index" offset="0x6" visible="true" />
-			<int8 name="Unknown" offset="0x7" visible="false" />
+			<int8 name="Useless Padding" offset="0x7" visible="false" />
 		</reflexive>
 	</reflexive>
 	<reflexive name="Nodes" offset="0xAC" visible="true" entrySize="0x5C">
@@ -1274,7 +1267,7 @@
 		<stringid name="Permutation" offset="0x4" visible="true" />
 	</reflexive>
 	<reflexive name="Unknown" offset="0x150" visible="false" entrySize="0x8">
-		<stringid name="Unknown" offset="0x0" visible="false" />
+		<stringid name="Region" offset="0x0" visible="false" />
 		<undefined name="Unknown" offset="0x4" visible="false" />
 	</reflexive>
 	<reflexive name="Unknown" offset="0x15C" visible="false" entrySize="0x14">
