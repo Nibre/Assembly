@@ -8,7 +8,7 @@
 		<revision author="Lord Zedd" version="4">Lots of updates</revision>
 		<revision author="Nibre" version="5">Updated Names</revision>
 	</revisions>
-	<tagRef name="Model" offset="0x0" visible="true" />
+	<tagRef name="Render Model" offset="0x0" visible="true" />
 	<tagRef name="Collision Model" offset="0x10" visible="true" />
 	<tagRef name="Animation" offset="0x20" visible="true" />
 	<tagRef name="Physics Model" offset="0x30" visible="true" />
@@ -39,7 +39,7 @@
 		<reflexive name="Regions" offset="0x14" visible="true" entrySize="0x18">
 			<stringId name="Name" offset="0x0" visible="true" />
 			<int8 name="Model Region Index" offset="0x4" visible="true" />
-			<int8 name="Unknown" offset="0x5" visible="false" />
+			<int8 name="Runtime Flags" offset="0x5" visible="true" />
 			<int16 name="Parent Variant Index" offset="0x6" visible="true" />
 			<reflexive name="Permutations" offset="0x8" visible="true" entrySize="0x24">
 				<stringId name="Name" offset="0x0" visible="true" />
@@ -47,8 +47,7 @@
 				<bitfield8 name="Flags" offset="0x5" visible="true">
 					<bit name="Copy States To All Permutations" index="0" />
 				</bitfield8>
-				<int8 name="Unknown" offset="0x6" visible="false" />
-				<int8 name="Unknown" offset="0x7" visible="false" />
+				<int16 name="Useless Padding" offset="0x6" visible="false" />
 				<float32 name="Probability" offset="0x8" visible="true" />
 				<reflexive name="States" offset="0xC" visible="true" entrySize="0x20">
 					<stringId name="Name" offset="0x0" visible="true" />
@@ -57,11 +56,7 @@
 						<bit name="Blurred" index="0" />
 						<bit name="Hella Blurred" index="1" />
 						<bit name="Shielded" index="2" />
-						<bit name="Bit 3" index="3" />
-						<bit name="Bit 4" index="4" />
-						<bit name="Bit 5" index="5" />
-						<bit name="Bit 6" index="6" />
-						<bit name="Bit 7" index="7" />
+						<bit name="Battery Depleted" index="3" />
 					</bitfield8>
 					<enum16 name="State" offset="0x6" visible="true">
 						<option name="Default" value="0x0" />
@@ -74,9 +69,9 @@
 					<stringId name="Looping Effect Marker Name" offset="0x18" visible="true" />
 					<float32 name="Initial Probability" offset="0x1C" visible="true" />
 				</reflexive>
-				<undefined name="Unknown" offset="0x18" visible="false" />
-				<undefined name="Unknown" offset="0x1C" visible="false" />
-				<undefined name="Unknown" offset="0x20" visible="false" />
+				<int16 name="Useless Padding" offset="0x18" visible="false" />
+				<int16 name="Useless Padding" offset="0x1C" visible="false" />
+				<int16 name="Useless Padding" offset="0x20" visible="false" />
 			</reflexive>
 			<enum32 name="Sort Order" offset="0x14" visible="true">
 				<option name="No Sorting" value="0x0" />
@@ -108,7 +103,7 @@
 		<enum32 name="Choice" offset="0x4" visible="true">
 			<option name="Choose one Member" value="0x0" />
 			<option name="Choose all Members" value="0x1" />
-		</enum32>		
+		</enum32>
 		<reflexive name="Instance Members" offset="0x8" visible="true" entrySize="0x14">
 			<int32 name="Sub Instance Group Index" offset="0x0" visible="true" />
 			<stringid name="Instance Name" offset="0x4" visible="true" />
