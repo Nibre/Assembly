@@ -181,13 +181,13 @@
 	</reflexive>
 	<reflexive name="Materials" offset="0x7C" visible="true" entrySize="0x14">
 		<stringid name="Name" offset="0x0" visible="true" />
-		<int16 name="Unknown" offset="0x4" visible="false" />
+		<int16 name="Unused Flags" offset="0x4" visible="false" />
 		<int16 name="Damage Section Index" offset="0x6" visible="true" />
-		<int16 name="Unknown" offset="0x8" visible="false" />
-		<int16 name="Unknown" offset="0xA" visible="false" />
-		<stringid name="Material Name" offset="0xC" visible="true" />
+		<int16 name="Collision Material Index" offset="0x8" visible="true" />
+		<int16 name="Damager Material Index" offset="0xA" visible="true" />
+		<stringid name="Global Material Name" offset="0xC" visible="true" />
 		<int16 name="Global Material Index" offset="0x10" visible="true" />
-		<int16 name="Unknown" offset="0x12" visible="false" />
+		<int16 name="Useless Padding" offset="0x12" visible="false" />
 	</reflexive>
 	<reflexive name="New Damage Info" offset="0x88" visible="true" entrySize="0x100">
 		<bitfield32 name="Flags" offset="0x0" visible="true">
@@ -200,33 +200,18 @@
 			<bit name="Parent Never Takes Shield Damage For Children" index="6" />
 			<bit name="Cannot Die From Damage" index="7" />
 			<bit name="Passes Attached Damage To Riders" index="8" />
-			<bit name="Bit 9" index="9" />
-			<bit name="Bit 10" index="10" />
+			<bit name="Shield Depletion Is Permanent" index="9" />
+			<bit name="Shield Depletion Force Hard Ping" index="10" />
 			<bit name="Only Damaged By Player" index="11" />
-			<bit name="Bit 12" index="12" />
-			<bit name="Bit 13" index="13" />
-			<bit name="Bit 14" index="14" />
-			<bit name="Bit 15" index="15" />
-			<bit name="Bit 16" index="16" />
-			<bit name="Bit 17" index="17" />
-			<bit name="Bit 18" index="18" />
-			<bit name="Bit 19" index="19" />
-			<bit name="Bit 20" index="20" />
-			<bit name="Bit 21" index="21" />
-			<bit name="Bit 22" index="22" />
-			<bit name="Bit 23" index="23" />
-			<bit name="Bit 24" index="24" />
-			<bit name="Bit 25" index="25" />
-			<bit name="Bit 26" index="26" />
-			<bit name="Bit 27" index="27" />
-			<bit name="Bit 28" index="28" />
-			<bit name="Bit 29" index="29" />
-			<bit name="Bit 30" index="30" />
-			<bit name="Bit 31" index="31" />
+			<bit name="Health Regrows While Dead" index="12" />
+			<bit name="Shield Recharge Plays Only When Empty" index="13" />
+			<bit name="IGNORE Force Minimum Transfer" index="14" />
+			<bit name="Orphan From Postprocess Autogen" index="15" />
+			<bit name="Only Damaged By Boarding Damage" index="16" />
 		</bitfield32>
 		<stringid name="Global Indirect Material Name" offset="0x4" visible="true" />
 		<int16 name="Indirect Damage Section" offset="0x8" visible="true" />
-		<int16 name="Unknown" offset="0xA" visible="false" />
+		<int16 name="Useless Padding" offset="0xA" visible="false" />
 		<undefined name="Unknown" offset="0xC" visible="false" />
 		<enum8 name="Collision Damage Reporting Type" offset="0x10" visible="true">
 			<option name="Guardians" value="0x0" />
@@ -354,33 +339,35 @@
 			<option name="Tripmine" value="0x3B" />
 			<option name="Elephant Turret" value="0x3C" />
 		</enum8>
-		<int16 name="Unknown" offset="0x12" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
+		<int16 name="Useless Padding" offset="0x12" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<comment title="Body" />
 		<float32 name="Maximum Vitality" offset="0x28" visible="true" />
 		<float32 name="Minimum Stun Damage" offset="0x2C" visible="true" />
 		<float32 name="Stun Time" offset="0x30" visible="true" />
 		<float32 name="Recharge Time" offset="0x34" visible="true" />
 		<float32 name="Recharge Fraction" offset="0x38" visible="true" />
-		<undefined name="Unknown" offset="0x3C" visible="true" />
-		<undefined name="Unknown" offset="0x40" visible="true" />
-		<undefined name="Unknown" offset="0x44" visible="true" />
-		<undefined name="Unknown" offset="0x48" visible="true" />
-		<undefined name="Unknown" offset="0x4C" visible="true" />
-		<undefined name="Unknown" offset="0x50" visible="true" />
-		<undefined name="Unknown" offset="0x54" visible="true" />
-		<undefined name="Unknown" offset="0x58" visible="true" />
-		<undefined name="Unknown" offset="0x5C" visible="true" />
-		<undefined name="Unknown" offset="0x60" visible="true" />
-		<undefined name="Unknown" offset="0x64" visible="true" />
-		<undefined name="Unknown" offset="0x68" visible="true" />
-		<undefined name="Unknown" offset="0x6C" visible="true" />
-		<undefined name="Unknown" offset="0x70" visible="true" />
-		<undefined name="Unknown" offset="0x74" visible="true" />
-		<undefined name="Unknown" offset="0x78" visible="true" />
+		<undefined name="Useless Padding" offset="0x3C" visible="false" />
+		<undefined name="Useless Padding" offset="0x40" visible="false" />
+		<undefined name="Useless Padding" offset="0x44" visible="false" />
+		<undefined name="Useless Padding" offset="0x48" visible="false" />
+		<undefined name="Useless Padding" offset="0x4C" visible="false" />
+		<undefined name="Useless Padding" offset="0x50" visible="false" />
+		<undefined name="Useless Padding" offset="0x54" visible="false" />
+		<undefined name="Useless Padding" offset="0x58" visible="false" />
+		<undefined name="Useless Padding" offset="0x5C" visible="false" />
+		<undefined name="Useless Padding" offset="0x60" visible="false" />
+		<undefined name="Useless Padding" offset="0x64" visible="false" />
+		<undefined name="Useless Padding" offset="0x68" visible="false" />
+		<undefined name="Useless Padding" offset="0x6C" visible="false" />
+		<undefined name="Useless Padding" offset="0x70" visible="false" />
+		<undefined name="Useless Padding" offset="0x74" visible="false" />
+		<undefined name="Useless Padding" offset="0x78" visible="false" />
+		<comment title="Shield" />
 		<float32 name="Maximum Shield Vitality" offset="0x7C" visible="true" />
 		<stringid name="Global Shield Material Name" offset="0x80" visible="true" />
 		<float32 name="Minimum Stun Damage" offset="0x84" visible="true" />
@@ -398,33 +385,13 @@
 				<bit name="Cannot Die With Riders" index="2" />
 				<bit name="Takes Full Damage When Object Destroyed" index="3" />
 				<bit name="Restored On Ressurection" index="4" />
-				<bit name="Bit 5" index="5" />
-				<bit name="Bit 6" index="6" />
+				<bit name="Unused" index="5" />
+				<bit name="Unused" index="6" />
 				<bit name="Headshotable" index="7" />
 				<bit name="Ignores Shields" index="8" />
-				<bit name="Bit 9" index="9" />
-				<bit name="Bit 10" index="10" />
-				<bit name="Bit 11" index="11" />
-				<bit name="Bit 12" index="12" />
-				<bit name="Bit 13" index="13" />
-				<bit name="Bit 14" index="14" />
-				<bit name="Bit 15" index="15" />
-				<bit name="Bit 16" index="16" />
-				<bit name="Bit 17" index="17" />
-				<bit name="Bit 18" index="18" />
-				<bit name="Bit 19" index="19" />
-				<bit name="Bit 20" index="20" />
-				<bit name="Bit 21" index="21" />
-				<bit name="Bit 22" index="22" />
-				<bit name="Bit 23" index="23" />
-				<bit name="Bit 24" index="24" />
-				<bit name="Bit 25" index="25" />
-				<bit name="Bit 26" index="26" />
-				<bit name="Bit 27" index="27" />
-				<bit name="Bit 28" index="28" />
-				<bit name="Bit 29" index="29" />
-				<bit name="Bit 30" index="30" />
-				<bit name="Bit 31" index="31" />
+				<bit name="Takes Full Damage When Shield Depleted" index="9" />
+				<bit name="Networked" index="10" />
+				<bit name="Allow Damage Response Overflow" index="11" />
 			</bitfield32>
 			<float32 name="Vitality Percentage" offset="0x8" visible="true" />
 			<reflexive name="Instant Responses" offset="0xC" visible="true" entrySize="0x88">
@@ -440,8 +407,8 @@
 					<option name="Loosen One of Group" value="0x3" />
 					<option name="Loosen Entire Group" value="0x4" />
 				</enum16>
-				<stringid name="Trigger" offset="0x4" visible="true" />
-				<bitfield32 name="Flags" offset="0x8" visible="true">
+				<stringid name="Constraint/Group Name" offset="0x4" visible="true" />
+				<bitfield32 name="Damage Response Flags" offset="0x8" visible="true">
 					<bit name="Kills Object" index="0" />
 					<bit name="Inhibits Melee Attack" index="1" />
 					<bit name="Inhibits Weapon Attack" index="2" />
@@ -467,13 +434,13 @@
 					<bit name="Triggers Special Death" index="22" />
 					<bit name="Only On Special Death" index="23" />
 					<bit name="Only NOT On Special Death" index="24" />
-					<bit name="Bit 25" index="25" />
+					<bit name="Buckles Giants" index="25" />
 					<bit name="Causes Detonation In Single Player" index="26" />
-					<bit name="Bit 27" index="27" />
-					<bit name="Bit 28" index="28" />
-					<bit name="Bit 29" index="29" />
-					<bit name="Bit 30" index="30" />
-					<bit name="Bit 31" index="31" />
+					<bit name="Skip Sounds On Generic Effect" index="27" />
+					<bit name="Kills Giants" index="28" />
+					<bit name="Skip Sounds On Special Death" index="29" />
+					<bit name="Cause Head Dismemberment" index="30" />
+					<bit name="Cause Left Leg Dismemberment" index="31" />
 				</bitfield32>
 				<float32 name="Damage Threshold" offset="0xC" visible="true" />
 				<tagref name="Primary Transition Effect" offset="0x10" visible="true" />
@@ -487,7 +454,7 @@
 					<option name="Major Damage" value="0x3" />
 					<option name="Destroyed" value="0x4" />
 				</enum16>
-				<int16 name="Runtime Region Index" offset="0x46" visible="true" />
+				<int16 name="Region Index" offset="0x46" visible="true" />
 				<stringid name="Secondary Region" offset="0x48" visible="true" />
 				<enum16 name="Secondary New State" offset="0x4C" visible="true">
 					<option name="Default" value="0x0" />
@@ -497,14 +464,13 @@
 					<option name="Destroyed" value="0x4" />
 				</enum16>
 				<int16 name="Secondary Runtime Region Index" offset="0x4E" visible="true" />
-				<int16 name="Unknown" offset="0x50" visible="true" />
-				<enum16 name="Unknown Special Damage" offset="0x52" visible="true">
-					<option name="None" value="0x0" />
-					<option name="1" value="0x1" />
-					<option name="2" value="0x2" />
-					<option name="3" value="0x3" />
+				<int16 name="Destroy Instance Group Index" offset="0x50" visible="true" />
+				<enum16 name="Custom Response Behavior" offset="0x52" visible="true">
+					<option name="Play Always" value="0x0" />
+					<option name="Play If Lables Match" value="0x1" />
+					<option name="Play If Lables Differ" value="0x2" />
 				</enum16>
-				<stringid name="Special Damage Case" offset="0x54" visible="true" />
+				<stringid name="Custom Response Label" offset="0x54" visible="true" />
 				<stringid name="Effect Marker Name" offset="0x58" visible="true" />
 				<stringid name="Damage Effect Marker Name" offset="0x5C" visible="true" />
 				<float32 name="Response Delay" offset="0x60" visible="true" />
@@ -515,49 +481,49 @@
 				<stringid name="Destroyed Child Object Marker Name" offset="0x80" visible="true" />
 				<float32 name="Total Damage Threshold" offset="0x84" visible="true" />
 			</reflexive>
-			<undefined name="Unknown" offset="0x18" visible="false" />
-			<undefined name="Unknown" offset="0x1C" visible="false" />
-			<undefined name="Unknown" offset="0x20" visible="false" />
-			<undefined name="Unknown" offset="0x24" visible="false" />
-			<undefined name="Unknown" offset="0x28" visible="false" />
-			<undefined name="Unknown" offset="0x2C" visible="false" />
+			<undefined name="Useless Padding" offset="0x18" visible="false" />
+			<undefined name="Useless Padding" offset="0x1C" visible="false" />
+			<undefined name="Useless Padding" offset="0x20" visible="false" />
+			<undefined name="Useless Padding" offset="0x24" visible="false" />
+			<undefined name="Useless Padding" offset="0x28" visible="false" />
+			<undefined name="Useless Padding" offset="0x2C" visible="false" />
 			<float32 name="Stun Time" offset="0x30" visible="true" />
 			<float32 name="Recharge Time" offset="0x34" visible="true" />
-			<float32 name="Unknown" offset="0x38" visible="false" />
+			<float32 name="Recharge Velocity" offset="0x38" visible="true" />
 			<stringid name="Resurrection Region Name" offset="0x3C" visible="true" />
-			<int16 name="Ressurection Region Runtime Index" offset="0x40" visible="true" />
-			<int16 name="Unknown" offset="0x42" visible="false" />
+			<int16 name="Ressurection Region Index" offset="0x40" visible="true" />
+			<int16 name="Useless Padding" offset="0x42" visible="false" />
 		</reflexive>
-		<reflexive name="Nodes" offset="0xD0" visible="false" entrySize="0x10">
-			<int16 name="Unknown" offset="0x0" visible="false" />
-			<int16 name="Unknown" offset="0x2" visible="false" />
-			<undefined name="Unknown" offset="0x4" visible="false" />
-			<undefined name="Unknown" offset="0x8" visible="false" />
-			<undefined name="Unknown" offset="0xC" visible="false" />
+		<reflexive name="Nodes" offset="0xD0" visible="true" entrySize="0x10">
+			<int16 name="Damage Part Index" offset="0x0" visible="true" />
+			<int16 name="Useless Padding" offset="0x2" visible="false" />
+			<undefined name="Useless Padding" offset="0x4" visible="false" />
+			<undefined name="Useless Padding" offset="0x8" visible="false" />
+			<undefined name="Useless Padding" offset="0xC" visible="false" />
 		</reflexive>
-		<int16 name="Global Shield Material Index" offset="0xDC" visible="true" />
-		<int16 name="Global Indirect Material Index" offset="0xDE" visible="true" />
-		<float32 name="Unknown" offset="0xE0" visible="false" />
-		<float32 name="Unknown" offset="0xE4" visible="false" />
+		<int16 name="Shield Material Type Index" offset="0xDC" visible="true" />
+		<int16 name="Indirect Material Type Index" offset="0xDE" visible="true" />
+		<float32 name="Shield Recharge Velocity" offset="0xE0" visible="true" />
+		<float32 name="Health Recharge Velocity" offset="0xE4" visible="true" />
 		<reflexive name="Damage Seats" offset="0xE8" visible="true" entrySize="0x20">
 			<stringid name="Seat Label" offset="0x0" visible="true" />
 			<float32 name="Direct Damage Scale" offset="0x4" visible="true" />
 			<float32 name="Damage Transfer Fall-Off Radius" offset="0x8" visible="true" />
 			<float32 name="Maximum Transfer Damage Scale" offset="0xC" visible="true" />
 			<float32 name="Minimum Transfer-Damage Scale" offset="0x10" visible="true" />
-			<reflexive name="Unknown" offset="0x14" visible="false" entrySize="0x2C">
-				<stringid name="Node" offset="0x0" visible="true" />
-				<int16 name="Unknown" offset="0x4" visible="false" />
-				<int16 name="Unknown" offset="0x6" visible="false" />
-				<undefined name="Unknown" offset="0x8" visible="false" />
-				<undefined name="Unknown" offset="0xC" visible="false" />
-				<undefined name="Unknown" offset="0x10" visible="false" />
-				<undefined name="Unknown" offset="0x14" visible="false" />
-				<undefined name="Unknown" offset="0x18" visible="false" />
-				<undefined name="Unknown" offset="0x1C" visible="false" />
-				<undefined name="Unknown" offset="0x20" visible="false" />
-				<undefined name="Unknown" offset="0x24" visible="false" />
-				<undefined name="Unknown" offset="0x28" visible="false" />
+			<reflexive name="Region-specific Damage" offset="0x14" visible="true" entrySize="0x2C">
+				<stringid name="Damage Region Name" offset="0x0" visible="true" />
+				<int16 name="Damage Region Index" offset="0x4" visible="true" />
+				<int16 name="Useless Padding" offset="0x6" visible="false" />
+				<float32 name="Direct Damage Scale (Minor)" offset="0x8" visible="true" />
+				<float32 name="Max. Transfer Scale (Minor)" offset="0xC" visible="true" />
+				<float32 name="Min Transfer Scale (Minor)" offset="0x10" visible="true" />
+				<float32 name="Direct Damage Scale (Medium)" offset="0x14" visible="true" />
+				<float32 name="Max. Transfer Scale (Medium)" offset="0x18" visible="true" />
+				<float32 name="Min Transfer Scale (Medium)" offset="0x1C" visible="true" />
+				<float32 name="Direct Damage Scale (Major)" offset="0x20" visible="true" />
+				<float32 name="Max. Transfer Scale (Major)" offset="0x24" visible="true" />
+				<float32 name="Min Transfer Scale (Major)" offset="0x28" visible="true" />
 			</reflexive>
 		</reflexive>
 		<reflexive name="Damage Constraints" offset="0xF4" visible="true" entrySize="0x14">
