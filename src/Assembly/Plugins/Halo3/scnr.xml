@@ -3875,24 +3875,37 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 		</enum16>
 	</reflexive>
 	<reflexive name="Trigger Volumes" offset="0x260" visible="true" entrySize="0x44">
+		<comment title="Naming">The name of the Trigger Volume specifies what kind of volume it is;
+	'zone_set:'
+	'begin_zone_set:'
+	'kill' (plus '_soft' for soft Kill Volume)
+	'playerkill' (plus '_soft' for soft Kill Volume) for Player only Kill Volume 
+	'safe_zone' (plus '_soft' for soft Kill Volume)
+	'location_'
+	'unsafe_spawn'
+	append ':*' to Zone Set names to allow Vehicles to teleport along with their Players.
+		</comment>
 		<stringId name="Name" offset="0x0" visible="true" />
 		<int16 name="Object Name" offset="0x4" visible="true" />
-		<int16 name="Unknown" offset="0x6" visible="false" />
+		<int16 name="Runtime Node Index" offset="0x6" visible="true" />
 		<stringId name="Node Name" offset="0x8" visible="true" />
-		<float32 name="Unknown" offset="0xC" visible="false" />
-		<float32 name="Unknown" offset="0x10" visible="false" />
-		<float32 name="Unknown" offset="0x14" visible="false" />
-		<float32 name="Unknown" offset="0x18" visible="false" />
-		<float32 name="Unknown" offset="0x1C" visible="false" />
-		<float32 name="Unknown" offset="0x20" visible="false" />
+		<float32 name="Forward i" offset="0xC" visible="true" />
+		<float32 name="Forward j" offset="0x10" visible="true" />
+		<float32 name="Forward k" offset="0x14" visible="true" />
+		<float32 name="Up i" offset="0x18" visible="true" />
+		<float32 name="Up j" offset="0x1C" visible="true" />
+		<float32 name="Up k" offset="0x20" visible="true" />
 		<float32 name="Position x" offset="0x24" visible="true" />
 		<float32 name="Position y" offset="0x28" visible="true" />
 		<float32 name="Position z" offset="0x2C" visible="true" />
 		<float32 name="Extents x" offset="0x30" visible="true" />
 		<float32 name="Extents y" offset="0x34" visible="true" />
 		<float32 name="Extents z" offset="0x38" visible="true" />
-		<undefined name="Unknown" offset="0x3C" visible="false" />
-		<int16 name="Kill Volume" offset="0x40" visible="true" />
+		<float32 name="Bounding Radius" offset="0x3C" visible="true" />
+		<comment title="Bounding Radius Calculation">It's the distance from the Center to a Corner
+	((Extents.x/2)^2+(Extents.y/2)^2+(Extents.z/2)^2)^0.5
+		</comment>
+		<int16 name="Kill Volume Index" offset="0x40" visible="true" />
 		<int16 name="Editor Folder Index" offset="0x42" visible="true" />
 	</reflexive>
 	<undefined name="Unknown" offset="0x26C" visible="false" />
