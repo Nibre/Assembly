@@ -6,6 +6,7 @@
 		<revision author="-DeToX-" version="2">Named Some Values...</revision>
 		<revision author="Halodu03de" version="3">added chunk code</revision>
 		<revision author="Lord Zedd" version="4">Lots of updates</revision>
+		<revision author="Nibre" version="5">Updated Names</revision>
 	</revisions>
 	<tagRef name="Model" offset="0x0" visible="true" />
 	<tagRef name="Collision Model" offset="0x10" visible="true" />
@@ -104,12 +105,15 @@
 	</reflexive>
 	<reflexive name="Instance Groups" offset="0x70" visible="true" entrySize="0x18">
 		<stringid name="Name" offset="0x0" visible="true" />
-		<int32 name="Unknown" offset="0x4" visible="false" />
+		<enum32 name="Choice" offset="0x4" visible="true">
+			<option name="Choose one Member" value="0x0" />
+			<option name="Choose all Members" value="0x1" />
+		</enum32>		
 		<reflexive name="Instance Members" offset="0x8" visible="true" entrySize="0x14">
-			<int32 name="Unknown" offset="0x0" visible="false" />
+			<int32 name="Sub Instance Group Index" offset="0x0" visible="true" />
 			<stringid name="Instance Name" offset="0x4" visible="true" />
 			<float32 name="Probability" offset="0x8" visible="true" />
-			<bitfield32 name="Instance Flags 1" offset="0xC" visible="true">
+			<bitfield32 name="Instance Placement Flags 1" offset="0xC" visible="true">
 				<bit name="Instance 0" index="0" />
 				<bit name="Instance 1" index="1" />
 				<bit name="Instance 2" index="2" />
@@ -143,7 +147,7 @@
 				<bit name="Instance 30" index="30" />
 				<bit name="Instance 31" index="31" />
 			</bitfield32>
-			<bitfield32 name="Instance Flags 2" offset="0x10" visible="true">
+			<bitfield32 name="Instance Placement Flags 2" offset="0x10" visible="true">
 				<bit name="Instance 32" index="0" />
 				<bit name="Instance 33" index="1" />
 				<bit name="Instance 34" index="2" />
@@ -178,7 +182,7 @@
 				<bit name="Instance 63" index="31" />
 			</bitfield32>
 		</reflexive>
-		<float32 name="Probability" offset="0x14" visible="true" />
+		<float32 name="Total Probability" offset="0x14" visible="true" />
 	</reflexive>
 	<reflexive name="Materials" offset="0x7C" visible="true" entrySize="0x14">
 		<stringid name="Name" offset="0x0" visible="true" />
