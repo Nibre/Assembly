@@ -8,6 +8,7 @@
 		<revision author="DeadCanadian" version="4">added plugins, named some structs, and stuff</revision>
 		<revision author="DeadCanadian" version="5">added spawn time for objects placement and vehicle spawn effects</revision>
 		<revision author="Lord Zedd" version="6">Regenerated to bring back deleted sections.</revision>
+		<revision author="Nibre" version="7">Updated Names</revision>
 	</revisions>
 	<enum16 name="Map Type" offset="0x0" visible="true">
 		<option name="Single Player" value="0x0" />
@@ -4020,7 +4021,7 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	<reflexive name="Squads" offset="0x38C" visible="true" entrySize="0x40">
 		<ascii name="Name" offset="0x0" visible="true" length="0x20" />
 		<bitfield32 name="Flags" offset="0x20" visible="true">
-			<bit name="Bit 0" index="0" />
+			<bit name="Unused" index="0" />
 			<bit name="Blind" index="1" />
 			<bit name="Deaf" index="2" />
 			<bit name="Braindead" index="3" />
@@ -4077,7 +4078,12 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 		<int16 name="Objective Index" offset="0x2C" visible="true" />
 		<int16 name="Objective Role Index" offset="0x2E" visible="false" />
 		<reflexive name="Base Squad" offset="0x30" visible="true" entrySize="0x60">
-			<int16 name="Unknown" offset="0x0" visible="false" />
+			<bitfield16 name="Difficulty Flags" offset="0x0" visible="true">
+				<bit name="Easy" index="0" />
+				<bit name="Normal" index="1" />
+				<bit name="Heroic" index="2" />
+				<bit name="Legendary" index="3" />
+			</bitfield16>
 			<int16 name="Unknown" offset="0x2" visible="false" />
 			<int16 name="Count" offset="0x4" visible="true" />
 			<int16 name="Unknown" offset="0x6" visible="false" />
@@ -4114,7 +4120,12 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 				<int16 name="Unknown" offset="0x36" visible="false" />
 			</reflexive>
 			<reflexive name="Starting Locations" offset="0x54" visible="true" entrySize="0x88">
-				<int16 name="Unknown" offset="0x0" visible="false" />
+				<bitfield16 name="Difficulty Flags" offset="0x0" visible="true">
+					<bit name="Easy" index="0" />
+					<bit name="Normal" index="1" />
+					<bit name="Heroic" index="2" />
+					<bit name="Legendary" index="3" />
+				</bitfield16>
 				<int16 name="Unknown" offset="0x2" visible="false" />
 				<stringid name="Name" offset="0x4" visible="true" />
 				<float32 name="Position x" offset="0x8" visible="true" />
