@@ -4,10 +4,11 @@
 	<revisions>
 		<revision author="Assembly" version="1">Generated plugin from scratch.</revision>
 		<revision author="Lord Zedd" version="2">Standardizing.</revision>
+		<revision author="Nibre" version="3">Named Method Options block</revision>
 	</revisions>
 	<tagRef name="Base Render Method" offset="0x0" visible="true" />
-	<reflexive name="Unknown" offset="0x10" visible="false" entrySize="0x2">
-		<int16 name="Unknown" offset="0x0" visible="false" />
+	<reflexive name="Method Options" offset="0x10" visible="true" entrySize="0x2">
+		<int16 name="Shader Option Index" offset="0x0" visible="true" />
 	</reflexive>
 	<reflexive name="Import Data" offset="0x1C" visible="true" entrySize="0x3C">
 		<stringId name="Material Type" offset="0x0" visible="true" />
