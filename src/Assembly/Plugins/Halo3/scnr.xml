@@ -815,14 +815,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Scenery Palette" offset="0xC8" visible="true" entrySize="0x30">
 		<tagRef name="Scenery" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Bipeds" offset="0xD4" visible="true" entrySize="0x74">
 		<int16 name="Palette Index" offset="0x0" visible="true" />
@@ -1067,14 +1067,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Biped Palette" offset="0xE0" visible="true" entrySize="0x30">
 		<tagRef name="Biped" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Vehicles" offset="0xEC" visible="true" entrySize="0xA8">
 		<int16 name="Palette Index" offset="0x0" visible="true" />
@@ -1380,14 +1380,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Vehicle Palette" offset="0xF8" visible="true" entrySize="0x30">
 		<tagRef name="Vehicle" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Equipment" offset="0x104" visible="true" entrySize="0x8C">
 		<int16 name="Palette Index" offset="0x0" visible="true" />
@@ -1677,14 +1677,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Equipment Palette" offset="0x110" visible="true" entrySize="0x30">
 		<tagRef name="Equipment" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Weapons" offset="0x11C" visible="true" entrySize="0xA8">
 		<int16 name="Palette Index" offset="0x0" visible="true" />
@@ -1991,14 +1991,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Weapon Palette" offset="0x128" visible="true" entrySize="0x30">
 		<tagRef name="Weapon" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Device Groups" offset="0x134" visible="true" entrySize="0x28">
 		<ascii name="Name" offset="0x0" visible="true" length="0x20" />
@@ -2314,14 +2314,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Machine Palette" offset="0x14C" visible="true" entrySize="0x30">
 		<tagRef name="Machine" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Terminals" offset="0x158" visible="true" entrySize="0x60">
 		<int16 name="Palette Index" offset="0x0" visible="true" />
@@ -2554,14 +2554,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Terminal Palette" offset="0x164" visible="true" entrySize="0x30">
 		<tagRef name="Terminal" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Controls" offset="0x170" visible="true" entrySize="0x64">
 		<int16 name="Palette Index" offset="0x0" visible="true" />
@@ -2829,14 +2829,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Control Palette" offset="0x17C" visible="true" entrySize="0x30">
 		<tagRef name="Control" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Sound Scenery" offset="0x188" visible="true" entrySize="0x70">
 		<int16 name="Palette Index" offset="0x0" visible="true" />
@@ -3038,14 +3038,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Sound Scenery Palette" offset="0x194" visible="true" entrySize="0x30">
 		<tagRef name="Sound Scenery" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Giants" offset="0x1A0" visible="true" entrySize="0x84">
 		<int16 name="Palette Index" offset="0x0" visible="true" />
@@ -3303,14 +3303,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Giant Palette" offset="0x1AC" visible="true" entrySize="0x30">
 		<tagRef name="Giant" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Effect Scenery" offset="0x1B8" visible="true" entrySize="0x54">
 		<int16 name="Palette Index" offset="0x0" visible="true" />
@@ -3504,14 +3504,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Effect Scenery Palette" offset="0x1C4" visible="true" entrySize="0x30">
 		<tagRef name="Effect Scenery" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Light Volumes" offset="0x1D0" visible="true" entrySize="0x8C">
 		<int16 name="Palette Index" offset="0x0" visible="true" />
@@ -3771,14 +3771,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Light Volumes Palette" offset="0x1DC" visible="true" entrySize="0x30">
 		<tagRef name="Light Volume" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Sandbox Vehicles" offset="0x1E8" visible="true" entrySize="0x30">
 		<tagRef name="Object" offset="0x0" visible="true" />
@@ -3858,11 +3858,25 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 		<undefined name="Unknown" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Soft Ceilings" offset="0x23C" visible="true" entrySize="0xC">
-		<int16 name="Type" offset="0x0" visible="true" />
-		<int16 name="Unknown" offset="0x2" visible="true" />
+		<bitfield16 name="Flags" offset="0x0" visible="true">
+			<bit name="Ignore Bipeds" index="0"/>
+			<bit name="Ignore Vehicles" index="1"/>
+			<bit name="Ignore Camera" index="2"/>
+			<bit name="Ignore Huge Vehicles" index="3"/>
+		</bitfield16>
+		<bitfield16 name="Runtime Flags" offset="0x2" visible="true">
+			<bit name="Ignore Bipeds" index="0"/>
+			<bit name="Ignore Vehicles" index="1"/>
+			<bit name="Ignore Camera" index="2"/>
+			<bit name="Ignore Huge Vehicles" index="3"/>
+		</bitfield16>
 		<stringid name="Name" offset="0x4" visible="true" />
-		<int16 name="Unknown" offset="0x8" visible="true" />
-		<int16 name="Unknown" offset="0xA" visible="true" />
+		<enum16 name="Type" offset="0x8" visible="true">
+			<option name="Acceleration" value="0x0"/>
+			<option name="Soft Kill" value="0x1"/>
+			<option name="Slip Surface" value="0x2"/>
+		</enum16>
+		<int16 name="Useless Padding" offset="0xA" visible="false" />
 	</reflexive>
 	<reflexive name="Player Starting Profile" offset="0x248" visible="true" entrySize="0x54">
 		<ascii name="Name" offset="0x0" visible="true" length="0x20" />
@@ -3885,7 +3899,7 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 		<float32 name="Position z" offset="0x8" visible="true" />
 		<degree name="Facing y" offset="0xC" visible="true" />
 		<degree name="Facing p" offset="0x10" visible="true" />
-		<int16 name="Unknown" offset="0x14" visible="false" />
+		<int16 name="Insertion Point Index" offset="0x14" visible="true" />
 		<enum16 name="Campaign Player Type" offset="0x16" visible="true">
 			<option name="Masterchief" value="0x0" />
 			<option name="Dervish" value="0x1" />
@@ -4009,9 +4023,9 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 		<float32 name="j" offset="0x8" visible="true" />
 		<float32 name="k" offset="0xC" visible="true" />
 		<float32 name="w" offset="0x10" visible="true" />
-		<float32 name="X" offset="0x14" visible="true" />
-		<float32 name="Y" offset="0x18" visible="true" />
-		<float32 name="Z" offset="0x1C" visible="true" />
+		<float32 name="x" offset="0x14" visible="true" />
+		<float32 name="y" offset="0x18" visible="true" />
+		<float32 name="z" offset="0x1C" visible="true" />
 		<float32 name="Scale" offset="0x20" visible="true" />
 	</reflexive>
 	<reflexive name="Decal Palette" offset="0x35C" visible="true" entrySize="0x10">
@@ -4796,65 +4810,41 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 				<bit name="Bit 5" index="5" />
 				<bit name="Bit 6" index="6" />
 				<bit name="Bit 7" index="7" />
-				<bit name="Bit 8" index="8" />
-				<bit name="Bit 9" index="9" />
-				<bit name="Bit 10" index="10" />
-				<bit name="Bit 11" index="11" />
-				<bit name="Bit 12" index="12" />
-				<bit name="Bit 13" index="13" />
-				<bit name="Bit 14" index="14" />
-				<bit name="Bit 15" index="15" />
-				<bit name="Bit 16" index="16" />
-				<bit name="Bit 17" index="17" />
-				<bit name="Bit 18" index="18" />
-				<bit name="Bit 19" index="19" />
-				<bit name="Bit 20" index="20" />
-				<bit name="Bit 21" index="21" />
-				<bit name="Bit 22" index="22" />
-				<bit name="Bit 23" index="23" />
-				<bit name="Bit 24" index="24" />
-				<bit name="Bit 25" index="25" />
-				<bit name="Bit 26" index="26" />
-				<bit name="Bit 27" index="27" />
-				<bit name="Bit 28" index="28" />
-				<bit name="Bit 29" index="29" />
-				<bit name="Bit 30" index="30" />
-				<bit name="Bit 31" index="31" />
 			</bitfield32>
 		</reflexive>
-		<undefined name="Unknown" offset="0xC" visible="false" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
-		<undefined name="Unknown" offset="0x30" visible="false" />
-		<undefined name="Unknown" offset="0x34" visible="false" />
-		<undefined name="Unknown" offset="0x38" visible="false" />
-		<undefined name="Unknown" offset="0x3C" visible="false" />
-		<undefined name="Unknown" offset="0x40" visible="false" />
-		<undefined name="Unknown" offset="0x44" visible="false" />
-		<undefined name="Unknown" offset="0x48" visible="false" />
-		<undefined name="Unknown" offset="0x4C" visible="false" />
-		<undefined name="Unknown" offset="0x50" visible="false" />
-		<undefined name="Unknown" offset="0x54" visible="false" />
-		<undefined name="Unknown" offset="0x58" visible="false" />
-		<undefined name="Unknown" offset="0x5C" visible="false" />
-		<undefined name="Unknown" offset="0x60" visible="false" />
-		<undefined name="Unknown" offset="0x64" visible="false" />
-		<undefined name="Unknown" offset="0x68" visible="false" />
-		<undefined name="Unknown" offset="0x6C" visible="false" />
-		<undefined name="Unknown" offset="0x70" visible="false" />
-		<undefined name="Unknown" offset="0x74" visible="false" />
-		<undefined name="Unknown" offset="0x78" visible="false" />
-		<undefined name="Unknown" offset="0x7C" visible="false" />
-		<undefined name="Unknown" offset="0x80" visible="false" />
+		<undefined name="Useless Padding" offset="0xC" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x30" visible="false" />
+		<undefined name="Useless Padding" offset="0x34" visible="false" />
+		<undefined name="Useless Padding" offset="0x38" visible="false" />
+		<undefined name="Useless Padding" offset="0x3C" visible="false" />
+		<undefined name="Useless Padding" offset="0x40" visible="false" />
+		<undefined name="Useless Padding" offset="0x44" visible="false" />
+		<undefined name="Useless Padding" offset="0x48" visible="false" />
+		<undefined name="Useless Padding" offset="0x4C" visible="false" />
+		<undefined name="Useless Padding" offset="0x50" visible="false" />
+		<undefined name="Useless Padding" offset="0x54" visible="false" />
+		<undefined name="Useless Padding" offset="0x58" visible="false" />
+		<undefined name="Useless Padding" offset="0x5C" visible="false" />
+		<undefined name="Useless Padding" offset="0x60" visible="false" />
+		<undefined name="Useless Padding" offset="0x64" visible="false" />
+		<undefined name="Useless Padding" offset="0x68" visible="false" />
+		<undefined name="Useless Padding" offset="0x6C" visible="false" />
+		<undefined name="Useless Padding" offset="0x70" visible="false" />
+		<undefined name="Useless Padding" offset="0x74" visible="false" />
+		<undefined name="Useless Padding" offset="0x78" visible="false" />
+		<undefined name="Useless Padding" offset="0x7C" visible="false" />
+		<undefined name="Useless Padding" offset="0x80" visible="false" />
 	</reflexive>
 	<reflexive name="Cutscene Flags" offset="0x430" visible="true" entrySize="0x1C">
-		<undefined name="Unknown" offset="0x0" visible="false" />
+		<undefined name="Useless Padding" offset="0x0" visible="false" />
 		<stringid name="Name" offset="0x4" visible="true" />
 		<float name="Position x" offset="0x8" visible="true" />
 		<float name="Position y" offset="0xC" visible="true" />
@@ -4864,22 +4854,7 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Cutscene Camera Points" offset="0x43C" visible="true" entrySize="0x40">
 		<bitfield16 name="Flags" offset="0x0" visible="true">
-			<bit name="Bit 0" index="0" />
-			<bit name="Bit 1" index="1" />
-			<bit name="Bit 2" index="2" />
-			<bit name="Bit 3" index="3" />
-			<bit name="Bit 4" index="4" />
-			<bit name="Bit 5" index="5" />
-			<bit name="Bit 6" index="6" />
-			<bit name="Bit 7" index="7" />
-			<bit name="Bit 8" index="8" />
-			<bit name="Bit 9" index="9" />
-			<bit name="Bit 10" index="10" />
-			<bit name="Bit 11" index="11" />
-			<bit name="Bit 12" index="12" />
-			<bit name="Bit 13" index="13" />
-			<bit name="Bit 14" index="14" />
-			<bit name="Bit 15" index="15" />
+			<bit name="Edit As Relative" index="0" />
 		</bitfield16>
 		<enum16 name="Type" offset="0x2" visible="true">
 			<option name="Normal" value="0x0" />
@@ -4888,13 +4863,13 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 			<option name="Ignore Target Updates" value="0x3" />
 		</enum16>
 		<ascii name="Name" offset="0x4" visible="true" length="0x20" />
-		<int32 name="Unknown" offset="0x24" visible="false" />
-		<float32 name="Position x" offset="0x28" visible="true" />
-		<float32 name="Position y" offset="0x2C" visible="true" />
-		<float32 name="Position z" offset="0x30" visible="true" />
-		<degree name="Orientation y" offset="0x34" visible="true" />
-		<degree name="Orientation p" offset="0x38" visible="true" />
-		<degree name="Orientation r" offset="0x3C" visible="true" />
+		<int32 name="Useless Padding" offset="0x24" visible="false" />
+		<float32 name="Useless Padding" offset="0x28" visible="false" />
+		<float32 name="Position x" offset="0x2C" visible="true" />
+		<float32 name="Position y" offset="0x30" visible="true" />
+		<float32 name="Position z" offset="0x34" visible="true" />
+		<degree name="Orientation y" offset="0x38" visible="true" />
+		<degree name="Orientation p" offset="0x3C" visible="true" />
 	</reflexive>
 	<reflexive name="Cutscene Titles" offset="0x448" visible="true" entrySize="0x28">
 		<stringid name="Name" offset="0x0" visible="true" />
@@ -4908,14 +4883,13 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 			<option name="Center" value="0x2" />
 		</enum16>
 		<enum16 name="Vertical Justification" offset="0xE" visible="true">
-			<option name="Bottom" value="0x0" />
+			<option name="Default" value="0x0" />
 			<option name="Top" value="0x1" />
-			<option name="Middle" value="0x2" />
-			<option name="Bottom 2" value="0x3" />
-			<option name="Top 2" value="0x4" />
+			<option name="Center" value="0x2" />
+			<option name="Bottom" value="0x3" />
 		</enum16>
 		<int16 name="Font" offset="0x10" visible="true" />
-		<int16 name="Unknown" offset="0x12" visible="false" />
+		<int16 name="Useless Padding" offset="0x12" visible="false" />
 		<colour32 name="Text Color" offset="0x14" format="argb" visible="true" />
 		<colour32 name="Shadow Color" offset="0x18" format="argb" visible="true" />
 		<float32 name="Fade In Time" offset="0x1C" visible="true" />
@@ -5029,7 +5003,7 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 		<int16 name="Trigger Volume Index" offset="0x0" visible="true" />
 	</reflexive>
 	<reflexive name="Scenario Safe Triggers" offset="0x498" visible="true" entrySize="0x2">
-		<int16 name="Trigger Volume" offset="0x0" visible="true" />
+		<int16 name="Trigger Volume Index" offset="0x0" visible="true" />
 	</reflexive>
 	<reflexive name="Script Expressions" offset="0x4A4" visible="true" entrySize="0x18">
 		<uint16 name="Salt" offset="0x0" visible="true" />
@@ -5844,14 +5818,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	</reflexive>
 	<reflexive name="Crate Palette" offset="0x5F4" visible="true" entrySize="0x30">
 		<tagRef name="Crate" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Flock Palette" offset="0x600" visible="true" entrySize="0x10">
 		<tagRef name="Flock" offset="0x0" visible="true" />
@@ -5917,14 +5891,14 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	<undefined name="Unknown" offset="0x630" visible="false" />
 	<reflexive name="Creature Palette" offset="0x634" visible="true" entrySize="0x30">
 		<tagRef name="Creature" offset="0x0" visible="true" />
-		<undefined name="Unknown" offset="0x10" visible="false" />
-		<undefined name="Unknown" offset="0x14" visible="false" />
-		<undefined name="Unknown" offset="0x18" visible="false" />
-		<undefined name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x10" visible="false" />
+		<undefined name="Useless Padding" offset="0x14" visible="false" />
+		<undefined name="Useless Padding" offset="0x18" visible="false" />
+		<undefined name="Useless Padding" offset="0x1C" visible="false" />
+		<undefined name="Useless Padding" offset="0x20" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
 	</reflexive>
 	<reflexive name="Editor Folders" offset="0x640" visible="true" entrySize="0x104">
 		<int32 name="Parent Folder" offset="0x0" visible="true" />
@@ -6125,7 +6099,7 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 	<reflexive name="Scenario Metagame" offset="0x770" visible="true" entrySize="0x10">
 		<reflexive name="Time Multipliers" offset="0x0" visible="true" entrySize="0x8">
 			<float32 name="Time" offset="0x0" visible="true" />
-			<float32 name="Multiplier" offset="0x4" visible="true" />
+			<float32 name="Score Multiplier" offset="0x4" visible="true" />
 		</reflexive>
 		<float32 name="Par Score" offset="0xC" visible="true" />
 	</reflexive>
