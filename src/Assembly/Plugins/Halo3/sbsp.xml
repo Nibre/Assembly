@@ -4,23 +4,24 @@
 	<revisions>
 		<revision author="Assembly" version="1">Generated plugin from scratch.</revision>
 		<revision author="Lord Zedd" version="2">Standardized model data and updated</revision>
+		<revision author="Nibre" version="3">Updated Names</revision>
 	</revisions>
 	<int32 name="BSP Checksum" offset="0x0" visible="true" />
 	<int32 name="Unknown" offset="0x4" visible="false" />
 	<undefined name="Unknown" offset="0x8" visible="false" />
-	<reflexive name="Structure Seams" offset="0xC" visible="true" entrySize="0x28">
-		<uint32 name="Unknown" offset="0x0" visible="false" />
-		<uint32 name="Unknown" offset="0x4" visible="false" />
-		<uint32 name="Unknown" offset="0x8" visible="false" />
-		<uint32 name="Unknown" offset="0xC" visible="false" />
-		<reflexive name="Unknown" offset="0x10" visible="true" entrySize="0x4">
-			<int32 name="Unknown" offset="0x0" visible="true" />
+	<reflexive name="Seam Identifiers" offset="0xC" visible="true" entrySize="0x28">
+		<uint32 name="Seam ID 0" offset="0x0" visible="true" />
+		<uint32 name="Seam ID 1" offset="0x4" visible="true" />
+		<uint32 name="Seam ID 2" offset="0x8" visible="true" />
+		<uint32 name="Seam ID 3" offset="0xC" visible="true" />
+		<reflexive name="Edge Mapping" offset="0x10" visible="true" entrySize="0x4">
+			<int32 name="Structure Edge Index" offset="0x0" visible="true" />
 		</reflexive>
-		<reflexive name="Seam Clusters" offset="0x1C" visible="true" entrySize="0x10">
+		<reflexive name="Cluster Mapping" offset="0x1C" visible="true" entrySize="0x10">
 			<int32 name="Cluster Index" offset="0x0" visible="true" />
-			<float32 name="Centroid X" offset="0x4" visible="true" />
-			<float32 name="Centroid Y" offset="0x8" visible="true" />
-			<float32 name="Centroid Z" offset="0xC" visible="true" />
+			<float32 name="Center x" offset="0x4" visible="true" />
+			<float32 name="Center y" offset="0x8" visible="true" />
+			<float32 name="Center z" offset="0xC" visible="true" />
 		</reflexive>
 	</reflexive>
 	<reflexive name="Unknown Raw 7th" offset="0x18" visible="false" entrySize="0x4">
@@ -31,11 +32,13 @@
 		<tagRef name="Shader" offset="0x0" visible="true" />
 		<int16 name="Global Material Index" offset="0x10" visible="true" />
 		<int16 name="Conveyor Surface Index" offset="0x12" visible="true" />
-		<int16 name="Seam Index" offset="0x14" visible="true" />
-		<int16 name="Unknown" offset="0x16" visible="false" />
+		<int16 name="Seam Mapping Index" offset="0x14" visible="true" />
+		<bitfield16 name="Flags" offset="0x16" visible="true">
+			<bit name="Is Seam" index="0"/>
+		</bitfield16>
 	</reflexive>
-	<reflexive name="Unknown Raw 3rd" offset="0x30" visible="false" entrySize="0x1">
-		<int8 name="Unknown" offset="0x0" visible="false" />
+	<reflexive name="Leaves" offset="0x30" visible="true" entrySize="0x1">
+		<int8 name="Cluster" offset="0x0" visible="true" />
 	</reflexive>
 	<float32 name="World Bounds X min" offset="0x3C" visible="true" />
 	<float32 name="World Bounds X max" offset="0x40" visible="true" />
@@ -55,48 +58,22 @@
 		<int16 name="Back Cluster" offset="0x0" visible="true" />
 		<int16 name="Front Cluster" offset="0x2" visible="true" />
 		<int32 name="Plane Index" offset="0x4" visible="true" />
-		<float32 name="Centroid X" offset="0x8" visible="true" />
-		<float32 name="Centroid Y" offset="0xC" visible="true" />
-		<float32 name="Centroid Z" offset="0x10" visible="true" />
+		<float32 name="Centroid x" offset="0x8" visible="true" />
+		<float32 name="Centroid y" offset="0xC" visible="true" />
+		<float32 name="Centroid z" offset="0x10" visible="true" />
 		<float32 name="Bounding Radius" offset="0x14" visible="true" />
 		<bitfield32 name="Flags" offset="0x18" visible="true">
-			<bit name="Bit 0" index="0" />
-			<bit name="Bit 1" index="1" />
-			<bit name="Bit 2" index="2" />
-			<bit name="Bit 3" index="3" />
-			<bit name="Bit 4" index="4" />
-			<bit name="Bit 5" index="5" />
-			<bit name="Bit 6" index="6" />
-			<bit name="Bit 7" index="7" />
-			<bit name="Bit 8" index="8" />
-			<bit name="Bit 9" index="9" />
-			<bit name="Bit 10" index="10" />
-			<bit name="Bit 11" index="11" />
-			<bit name="Bit 12" index="12" />
-			<bit name="Bit 13" index="13" />
-			<bit name="Bit 14" index="14" />
-			<bit name="Bit 15" index="15" />
-			<bit name="Bit 16" index="16" />
-			<bit name="Bit 17" index="17" />
-			<bit name="Bit 18" index="18" />
-			<bit name="Bit 19" index="19" />
-			<bit name="Bit 20" index="20" />
-			<bit name="Bit 21" index="21" />
-			<bit name="Bit 22" index="22" />
-			<bit name="Bit 23" index="23" />
-			<bit name="Bit 24" index="24" />
-			<bit name="Bit 25" index="25" />
-			<bit name="Bit 26" index="26" />
-			<bit name="Bit 27" index="27" />
-			<bit name="Bit 28" index="28" />
-			<bit name="Bit 29" index="29" />
-			<bit name="Bit 30" index="30" />
-			<bit name="Bit 31" index="31" />
+			<bit name="AI Can't Hear Through This Shit" index="0" />
+			<bit name="One-Way" index="1" />
+			<bit name="Door" index="2" />
+			<bit name="No-Way" index="3" />
+			<bit name="One-Way-Reversed" index="4" />
+			<bit name="No One Can Hear Through This" index="5" />
 		</bitfield32>
 		<reflexive name="Vertices" offset="0x1C" visible="true" entrySize="0xC">
-			<float32 name="X" offset="0x0" visible="true" />
-			<float32 name="Y" offset="0x4" visible="true" />
-			<float32 name="Z" offset="0x8" visible="true" />
+			<float32 name="Point x" offset="0x0" visible="true" />
+			<float32 name="Point y" offset="0x4" visible="true" />
+			<float32 name="Point z" offset="0x8" visible="true" />
 		</reflexive>
 	</reflexive>
 	<reflexive name="Unknown" offset="0x78" visible="false" entrySize="0x78">
@@ -242,7 +219,7 @@
 		</reflexive>
 		<int16 name="Mesh Index" offset="0x9C" visible="true" />
 		<int16 name="Unknown" offset="0x9E" visible="false" />
-		<reflexive name="Seams" offset="0xA0" visible="true" entrySize="0x1">
+		<reflexive name="Seam Indicies" offset="0xA0" visible="true" entrySize="0x1">
 			<int8 name="Seam Index" offset="0x0" visible="true" />
 		</reflexive>
 		<reflexive name="Decorator Grids" offset="0xAC" visible="true" entrySize="0x30">
@@ -520,9 +497,9 @@
 		<float32 name="j" offset="0x8" visible="true" />
 		<float32 name="k" offset="0xC" visible="true" />
 		<float32 name="w" offset="0x10" visible="true" />
-		<float32 name="X" offset="0x14" visible="true" />
-		<float32 name="Y" offset="0x18" visible="true" />
-		<float32 name="Z" offset="0x1C" visible="true" />
+		<float32 name="x" offset="0x14" visible="true" />
+		<float32 name="y" offset="0x18" visible="true" />
+		<float32 name="z" offset="0x1C" visible="true" />
 		<float32 name="Scale" offset="0x20" visible="true" />
 	</reflexive>
 	<reflexive name="Environment Object Palette" offset="0x170" visible="true" entrySize="0x24">
@@ -605,22 +582,22 @@
 		<float32 name="Position z" offset="0x30" visible="true" />
 		<int16 name="Mesh Index" offset="0x34" visible="true" />
 		<bitfield16 name="Flags" offset="0x36" visible="true">
-			<bit name="Bit 0" index="0" />
-			<bit name="No Projectile Collision" index="1" />
-			<bit name="Bit 2" index="2" />
-			<bit name="Bit 3" index="3" />
-			<bit name="Bit 4" index="4" />
-			<bit name="Bit 5" index="5" />
-			<bit name="Bit 6" index="6" />
-			<bit name="Bit 7" index="7" />
-			<bit name="Bit 8" index="8" />
-			<bit name="Bit 9" index="9" />
-			<bit name="Bit 10" index="10" />
-			<bit name="Bit 11" index="11" />
-			<bit name="Bit 12" index="12" />
-			<bit name="Bit 13" index="13" />
-			<bit name="Bit 14" index="14" />
-			<bit name="Bit 15" index="15" />
+			<bit name="Contains Split Lighting Parts" index="0" />
+			<bit name="Render Only" index="1" />
+			<bit name="Does Not Block AOE Damage" index="2" />
+			<bit name="Collidable" index="3" />
+			<bit name="Contains Decal Parts" index="4" />
+			<bit name="Contains Water Parts" index="5" />
+			<bit name="Negative Scale" index="6" />
+			<bit name="Outside Map" index="7" />
+			<bit name="Seam Colliding" index="8" />
+			<bit name="Contains Deferred Reflections" index="9" />
+			<bit name="Remove From Shadow Geometry" index="10" />
+			<bit name="Cinema Only" index="11" />
+			<bit name="Exclude From Cinema" index="12" />
+			<bit name="Disable FX" index="13" />
+			<bit name="Disable Play Collision" index="14" />
+			<bit name="Disable Bullet Collision" index="15" />
 		</bitfield16>
 		<int16 name="'Unknown Yo' Index" offset="0x38" visible="false" />
 		<int16 name="Unknown" offset="0x3A" visible="false" />
@@ -631,8 +608,19 @@
 		<float32 name="Bounding Sphere Radius1" offset="0x4C" visible="true" />
 		<float32 name="Bounding Sphere Radius2" offset="0x50" visible="true" />
 		<stringid name="Name" offset="0x54" visible="true" />
-		<int16 name="Pathfinding Policy" offset="0x58" visible="true" />
-		<int16 name="Lightmapping Policy" offset="0x5A" visible="true" />
+		<enum16 name="Pathfinding Policy" offset="0x58" visible="true">
+			<option name="Cut-Out" value="0x0"/>
+			<option name="Static" value="0x1"/>
+			<option name="None" value="0x2"/>
+		</enum16>
+		<enum16 name="Lightmapping Policy" offset="0x5A" visible="true">
+			<option name="Per-Pixel Shared" index="0"/>
+			<option name="Per-Vertex" value="0x0"/>
+			<option name="Single-Probe" value="0x1"/>
+			<option name="Exclude" value="0x2"/>
+			<option name="Per-Pixel AO" value="0x3"/>
+			<option name="Per-Vertex AO" value="0x4"/>
+		</enum16>
 		<undefined name="Unknown" offset="0x5C" visible="false" />
 		<reflexive name="Collision Definitions" offset="0x60" visible="true" entrySize="0x70" align="0x10">
 			<int32 name="Unknown" offset="0x0" visible="false" />
@@ -971,12 +959,12 @@
 	<reflexive name="Meshes" offset="0x2E4" visible="true" entrySize="0x4C">
 		<reflexive name="Parts" offset="0x0" visible="true" entrySize="0x10">
 			<int16 name="Material Index" offset="0x0" visible="true" />
-			<int16 name="'Unknown Nodey' Index" offset="0x2" visible="false" />
+			<int16 name="Transparent Sorting Index" offset="0x2" visible="true" />
 			<int16 name="Index Buffer Start" offset="0x4" visible="true" />
 			<int16 name="Index Buffer Count" offset="0x6" visible="true" />
-			<int16 name="Subpart Index" offset="0x8" visible="true" />
+			<int16 name="Subpart Start" offset="0x8" visible="true" />
 			<int16 name="Subpart Count" offset="0xA" visible="true" />
-			<int8 name="Unknown Enum?" offset="0xC" visible="false" /><!-- value of 4 enables above x2 index-->
+			<int8 name="Part Type Enum?" offset="0xC" visible="false" /><!-- value of 4 enables above x2 index-->
 			<bitfield8 name="Flags?" offset="0xD" visible="true">
 				<bit name="Bit 0" index="0" />
 				<bit name="Bit 1" index="1" />
@@ -993,7 +981,7 @@
 			<int16 name="Index Buffer Start" offset="0x0" visible="true" />
 			<int16 name="Index Buffer Count" offset="0x2" visible="true" />
 			<int16 name="Part Index" offset="0x4" visible="true" />
-			<int16 name="Vertex Count" offset="0x6" visible="true" />
+			<int16 name="Budget Vertex Count" offset="0x6" visible="true" />
 		</reflexive>
 		<int16 name="Vertex Buffer Index 1" offset="0x18" visible="true" />
 		<int16 name="Vertex Buffer Index 2" offset="0x1A" visible="true" />
@@ -1057,20 +1045,24 @@
 		<int8 name="Unknown" offset="0x31" visible="false" />
 		<int8 name="Unknown" offset="0x32" visible="false" />
 		<int8 name="Unknown" offset="0x33" visible="false" />
-		<reflexive name="Instanced Geometry Indices" offset="0x34" visible="true" entrySize="0x10">
-			<int16 name="Instanced Geometry Mesh Index 1" offset="0x0" visible="true" />
-			<int16 name="Instanced Geometry Mesh Index 2" offset="0x2" visible="true" />
-			<reflexive name="Instanced Geometry Mesh Contents" offset="0x4" visible="true" entrySize="0x2">
-				<int16 name="Instanced Geometry Index" offset="0x0" visible="true" />
+		<reflexive name="Instance Buckets" offset="0x34" visible="true" entrySize="0x10">
+			<int16 name="Mesh Index" offset="0x0" visible="true" />
+			<int16 name="Definition Index" offset="0x2" visible="true" />
+			<reflexive name="Instances" offset="0x4" visible="true" entrySize="0x2">
+				<int16 name="Instanced Index" offset="0x0" visible="true" />
 			</reflexive>
 		</reflexive>
-		<reflexive name="Unknown Water" offset="0x40" visible="false" entrySize="0x2">
-			<int16 name="Unknown" offset="0x0" visible="true" />
+		<reflexive name="Water Indices Start" offset="0x40" visible="false" entrySize="0x2">
+			<int16 name="Word" offset="0x0" visible="true" />
 		</reflexive>
 	</reflexive>
 	<reflexive name="Compression Info" offset="0x2F0" visible="true" entrySize="0x2C">
-		<int16 name="Unknown" offset="0x0" visible="false" />
-		<int16 name="Unknown" offset="0x2" visible="false" />
+		<bitfield16 name="Compression Flags" offset="0x0" visible="true">
+			<bit name="Compressed Position" index="0"/>
+			<bit name="Compressed Texcoord" index="1"/>
+			<bit name="Compressed Optimized" index="2"/>
+		</bitfield16>
+		<int16 name="Useless Padding" offset="0x2" visible="false" />
 		<float32 name="Position Bounds X min" offset="0x4" visible="true" />
 		<float32 name="Position Bounds X max" offset="0x8" visible="true" />
 		<float32 name="Position Bounds Y min" offset="0xC" visible="true" />
@@ -1082,22 +1074,22 @@
 		<float32 name="Texcoord Bounds Y min" offset="0x24" visible="true" />
 		<float32 name="Texcoord Bounds Y max" offset="0x28" visible="true" />
 	</reflexive>
-	<reflexive name="Unknown Nodey" offset="0x2FC" visible="false" entrySize="0x30">
-		<float32 name="Unknown" offset="0x0" visible="false" />
-		<float32 name="Unknown" offset="0x4" visible="false" />
-		<float32 name="Unknown" offset="0x8" visible="false" />
-		<float32 name="Unknown" offset="0xC" visible="false" />
-		<float32 name="Unknown" offset="0x10" visible="false" />
-		<float32 name="Unknown" offset="0x14" visible="false" />
-		<float32 name="Unknown" offset="0x18" visible="false" />
-		<float32 name="Unknown" offset="0x1C" visible="false" />
-		<int8 name="Node Index" offset="0x20" visible="false" />
-		<int8 name="Node Index" offset="0x21" visible="false" />
-		<int8 name="Node Index" offset="0x22" visible="false" />
-		<int8 name="Node Index" offset="0x23" visible="false" />
-		<float32 name="Unknown" offset="0x24" visible="false" />
-		<float32 name="Unknown" offset="0x28" visible="false" />
-		<float32 name="Unknown" offset="0x2C" visible="false" />
+	<reflexive name="Per Mesh Subpart Visibility" offset="0x2FC" visible="true" entrySize="0x30">
+		<float32 name="Plane i" offset="0x0" visible="true" />
+		<float32 name="Plane j" offset="0x4" visible="true" />
+		<float32 name="Plane k" offset="0x8" visible="true" />
+		<float32 name="Plane d" offset="0xC" visible="true" />
+		<float32 name="Position x" offset="0x10" visible="true" />
+		<float32 name="Position y" offset="0x14" visible="true" />
+		<float32 name="Position z" offset="0x18" visible="true" />
+		<float32 name="Radius" offset="0x1C" visible="true" />
+		<int8 name="Node Index" offset="0x20" visible="true" />
+		<int8 name="Node Index" offset="0x21" visible="true" />
+		<int8 name="Node Index" offset="0x22" visible="true" />
+		<int8 name="Node Index" offset="0x23" visible="true" />
+		<float32 name="Node Weight" offset="0x24" visible="true" />
+		<float32 name="Node Weight" offset="0x28" visible="true" />
+		<float32 name="Node Weight" offset="0x2C" visible="true" />
 	</reflexive>
 	<reflexive name="Unknown" offset="0x308" visible="false" entrySize="0x18">
 		<int16 name="Unknown" offset="0x0" visible="false" />
