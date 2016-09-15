@@ -6,6 +6,7 @@
 		<revision author="-DeToX-" version="2">Found Raw Identifier</revision>
 		<revision author="Lord Zedd" version="3">Updated</revision>
 		<revision author="Lord Zedd" version="4">Added Adjutant's format enum, named linear flag</revision>
+		<revision author="Nibre" version="7">Updated Names</revision>
 	</revisions>
 	<int32 name="Unknown" offset="0x0" visible="false" />
 	<int16 name="Unknown" offset="0x4" visible="false" />
@@ -14,35 +15,156 @@
 	<float32 name="Unknown" offset="0xC" visible="false" />
 	<int16 name="Unknown" offset="0x10" visible="false" />
 	<int16 name="Unknown" offset="0x12" visible="false" />
-	<reflexive name="Unknown" offset="0x14" visible="false" entrySize="0x28"><!-- decal_blood_thick_medium_bump -->
-		<undefined name="Unknown" offset="0x0" visible="false" />
-		<int32 name="Unknown" offset="0x4" visible="false" />
-		<int16 name="Unknown" offset="0x8" visible="false" />
-		<int16 name="Unknown" offset="0xA" visible="false" />
-		<int8 name="Unknown" offset="0xC" visible="false" />
-		<int8 name="Unknown" offset="0xD" visible="false" />
-		<int8 name="Unknown" offset="0xE" visible="false" />
-		<int8 name="Unknown" offset="0xF" visible="false" />
-		<int16 name="Unknown" offset="0x10" visible="false" />
-		<int16 name="Unknown" offset="0x12" visible="false" />
-		<float32 name="Unknown" offset="0x14" visible="false" />
-		<float32 name="Unknown" offset="0x18" visible="false" />
-		<float32 name="Unknown" offset="0x1C" visible="false" />
-		<undefined name="Unknown" offset="0x20" visible="false" />
-		<int32 name="Unknown" offset="0x24" visible="false" />
+	<reflexive name="Usage Override" offset="0x14" visible="true" entrySize="0x28"><!-- decal_blood_thick_medium_bump -->
+		<comment title="NOTE: The Offsets in this Block might be off, needs to be looked into futher. 'Packer' seems to come out wrong."/>
+		<float32 name="Source Gamma (0.0 for default)" offset="0x0" visible="true" />
+		<enum32 name="Bitmap Curve" offset="0x4" visible="true">
+			<option name="Unknown" value="0x0"/>
+			<option name="xRGB (Gamma 2.2)" value="0x1"/>
+			<option name="Gamma 2.0" value="0x2"/>
+			<option name="Linear" value="0x3"/>
+			<option name="Offset Log" value="0x4"/>
+			<option name="sRGB (Gamma 2.2)" value="0x5"/>
+			<option name="Rec709 (Gamma 2.2)" value="0x6"/>
+		</enum32>
+		<bitfield16 name="Flags" offset="0x8" visible="true">
+			<bit name="Ignore Curve Override" index="0" />
+			<bit name="Dont Allow Size Optimization" index="1" />
+			<bit name="Swap Axes" index="2" />
+			<bit name="Pre-filter Cubemaps" index="3" />
+		</bitfield16>
+		<enum8 name="Slicer" offset="0x9" visible="true">
+			<option name="Automatically Determine Slicer" value="0x0"/>
+			<option name="No Slicing (Each Source Bitmap Generates One Element)" value="0x1"/>
+			<option name="Color Plate Slicer" value="0x2"/>
+			<option name="Cube Map Slicer" value="0x3"/>
+			<option name="Color Grading Slicer" value="0x4"/>
+		</enum8>
+		<bitfield8 name="Dicer Flags" offset="0xA" visible="true">
+			<bit name="Convert Plate Color Key to Alpha Channel" index="0" />
+			<bit name="Rotate Cube Map to Match DirectX Format" index="1" />
+			<bit name="Sprites - Shrink Elements to Smallest Non-Zero Alpha Region" index="2" />
+			<bit name="Sprites - Shrink Elements to Smallest Non-Zero Color And Alpha Region" index="3" />
+			<bit name="Unsigned -> Signed Scale and Bias" index="4" />
+			<bit name="Color Grading sRGB Correction" index="5" />
+			<bit name="Color Grading Rec709 Correction" index="6" />
+		</bitfield8>
+		<enum8 name="Packer" offset="0xB" visible="true">
+			<option name="No Packing" value="0x0"/>
+			<option name="Sprite Pack (Packs Elements Into As Few Bitmaps Possible)" value="0x1"/>
+			<option name="Sprite Pack If Needed (Packs Elements Into As Few Bitmaps Possible)" value="0x2"/>
+			<option name="3D Pack (Packs Elements Into A 3D Bitmap)" value="0x3"/>
+		</enum8>
+		<bitfield8 name="Packer Flags" offset="0xC" visible="true">
+			<bit name="Shrink Sprite Texture Pages Tightly to Content" index="0" />
+		</bitfield8>
+		<enum8 name="Type" offset="0xD" visible="true">
+			<option name="2D Texture" value="0x0" />
+			<option name="3D Texture" value="0x1" />
+			<option name="Cube Map" value="0x2" />
+			<option name="Array" value="0x3" />
+		</enum8>
+		<int8 name="Mipmap Limit" offset="0xE" visible="true" />
+		<enum8 name="Smallest Mip" offset="0xF" visible="true">
+			<option name="1 Pixel" value="0x0"/>
+			<option name="2 Pixel" value="0x1"/>
+			<option name="4 Pixel" value="0x2"/>
+			<option name="8 Pixel" value="0x3"/>
+			<option name="16 Pixel" value="0x4"/>
+			<option name="32 Pixel" value="0x5"/>
+			<option name="64 Pixel" value="0x6"/>
+			<option name="128 Pixel" value="0x7"/>
+			<option name="256 Pixel" value="0x8"/>
+			<option name="512 Pixel" value="0x9"/>
+			<option name="1024 Pixel" value="0xA"/>
+		</enum8>
+		<enum8 name="Downsample Filter" offset="0x10" visible="true">
+			<option name="Point Sampled" value="0x0"/>
+			<option name="Box Filter" value="0x1"/>
+			<option name="Blackman Filter" value="0x2"/>
+			<option name="Lanczos Filter" value="0x3"/>
+			<option name="Nuttall Filter" value="0x4"/>
+			<option name="Blackman-Harris Filter" value="0x5"/>
+			<option name="Blackman-Nuttall Filter" value="0x6"/>
+			<option name="Flat Top Filter" value="0x7"/>
+			<option name="Extreme Filter" value="0x8"/>
+		</enum8>
+		<int8 name="Filter Radius Bias" offset="0x11" visible="true" />
+		<bitfield16 name="Downsample Flags" offset="0x12" visible="true">
+			<bit name="Sprites - Color Bleed in Zero Alpha Regions" index="0" />
+			<bit name="Pre-Multiply Alpha (before downsampling)" index="1" />
+			<bit name="Post-Divide Alpha (after downsampling)" index="2" />
+			<bit name="Height Map - Convert to Bump Map" index="3" />
+			<bit name="Detail Map - Fade to Gray" index="4" />
+			<bit name="Signed -&gt; Unsigned Scale and Bias" index="5" />
+			<bit name="Illum Map - Fade to Black" index="6" />
+			<bit name="ZBump - Scale by height and renormalize" index="8" />
+			<bit name="Cubemap - Fix seams" index="9" />
+			<bit name="Calculate specular power" index="10" />
+			<bit name="Downsample Bumps in Angular Space" index="11" />
+			<bit name="Standard Orientation of Normals in Angular Space and Renormalize" index="12" />
+			<bit name="Generate RGB luminance into alpha channel" index="13" />
+		</bitfield16>
+		<color32 name="Sprite Background Color" offset="0x14" format="rgb" visible="true" />
+		<enum8 name="Swizzle Red" offset="0x18" visible="true">
+			<option name="Default" value="0x0"/>
+			<option name="Source Red Channel" value="0x1"/>
+			<option name="Source Green Channel" value="0x2"/>
+			<option name="Source Blue Channel" value="0x3"/>
+			<option name="Source Alpha Channel" value="0x4"/>
+			<option name="Set to 1.0" value="0x5"/>
+			<option name="Set to 0.0" value="0x6"/>
+			<option name="Set to 0.5" value="0x7"/>
+			<option name="Random" value="0x8"/>
+		</enum8>
+		<enum8 name="Swizzle Green" offset="0x19" visible="true">
+			<option name="Default" value="0x0"/>
+			<option name="Source Red Channel" value="0x1"/>
+			<option name="Source Green Channel" value="0x2"/>
+			<option name="Source Blue Channel" value="0x3"/>
+			<option name="Source Alpha Channel" value="0x4"/>
+			<option name="Set to 1.0" value="0x5"/>
+			<option name="Set to 0.0" value="0x6"/>
+			<option name="Set to 0.5" value="0x7"/>
+			<option name="Random" value="0x8"/>
+		</enum8>
+		<enum8 name="Swizzle Blue" offset="0x20" visible="true">
+			<option name="Default" value="0x0"/>
+			<option name="Source Red Channel" value="0x1"/>
+			<option name="Source Green Channel" value="0x2"/>
+			<option name="Source Blue Channel" value="0x3"/>
+			<option name="Source Alpha Channel" value="0x4"/>
+			<option name="Set to 1.0" value="0x5"/>
+			<option name="Set to 0.0" value="0x6"/>
+			<option name="Set to 0.5" value="0x7"/>
+			<option name="Random" value="0x8"/>
+		</enum8>
+		<enum8 name="Swizzle Alpha" offset="0x21" visible="true">
+			<option name="Default" value="0x0"/>
+			<option name="Source Red Channel" value="0x1"/>
+			<option name="Source Green Channel" value="0x2"/>
+			<option name="Source Blue Channel" value="0x3"/>
+			<option name="Source Alpha Channel" value="0x4"/>
+			<option name="Set to 1.0" value="0x5"/>
+			<option name="Set to 0.0" value="0x6"/>
+			<option name="Set to 0.5" value="0x7"/>
+			<option name="Random" value="0x8"/>
+		</enum8>
+		<enum32 name="Bitmap Format" offset="0x22" visible="true">
+		</enum32>
 	</reflexive>
-	<reflexive name="Unknown Sequences" offset="0x20" visible="true" entrySize="0x40"><!-- rolling_smoke_plate -->
+	<reflexive name="Manual Sequences" offset="0x20" visible="true" entrySize="0x40"><!-- rolling_smoke_plate -->
 		<ascii name="Name" offset="0x0" visible="true" length="0x20" />
 		<int16 name="First Bitmap Index" offset="0x20" visible="true" />
 		<int16 name="Bitmap Count" offset="0x22" visible="true" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
-		<undefined name="Unknown" offset="0x30" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x30" visible="false" />
 		<reflexive name="Sprites" offset="0x34" visible="true" entrySize="0x20">
-			<int16 name="Bitmap Index" offset="0x0" visible="true" />
-			<int16 name="Unknown" offset="0x2" visible="false" />
-			<undefined name="Unknown" offset="0x4" visible="false" />
+			<int16 name="Useless Padding" offset="0x0" visible="false" />
+			<int16 name="Useless Padding" offset="0x2" visible="false" />
+			<undefined name="Useless Padding" offset="0x4" visible="false" />
 			<float32 name="Left" offset="0x8" visible="true" />
 			<float32 name="Right" offset="0xC" visible="true" />
 			<float32 name="Top" offset="0x10" visible="true" />
@@ -57,14 +179,14 @@
 		<ascii name="Name" offset="0x0" visible="true" length="0x20" />
 		<int16 name="First Bitmap Index" offset="0x20" visible="true" />
 		<int16 name="Bitmap Count" offset="0x22" visible="true" />
-		<undefined name="Unknown" offset="0x24" visible="false" />
-		<undefined name="Unknown" offset="0x28" visible="false" />
-		<undefined name="Unknown" offset="0x2C" visible="false" />
-		<undefined name="Unknown" offset="0x30" visible="false" />
+		<undefined name="Useless Padding" offset="0x24" visible="false" />
+		<undefined name="Useless Padding" offset="0x28" visible="false" />
+		<undefined name="Useless Padding" offset="0x2C" visible="false" />
+		<undefined name="Useless Padding" offset="0x30" visible="false" />
 		<reflexive name="Sprites" offset="0x34" visible="true" entrySize="0x20">
-			<int16 name="Bitmap Index" offset="0x0" visible="true" />
-			<int16 name="Unknown" offset="0x2" visible="false" />
-			<undefined name="Unknown" offset="0x4" visible="false" />
+			<int16 name="Useless Padding" offset="0x0" visible="false" />
+			<int16 name="Useless Padding" offset="0x2" visible="false" />
+			<undefined name="Useless Padding" offset="0x4" visible="false" />
 			<float32 name="Left" offset="0x8" visible="true" />
 			<float32 name="Right" offset="0xC" visible="true" />
 			<float32 name="Top" offset="0x10" visible="true" />
@@ -78,21 +200,21 @@
 		<int16 name="Width" offset="0x4" visible="true" />
 		<int16 name="Height" offset="0x6" visible="true" />
 		<int8 name="Depth" offset="0x8" visible="true" />
-		<bitfield8 name="Format Flags" offset="0x9" visible="true">
-			<bit name="Bit 0" index="0" />
-			<bit name="Bit 1" index="1" />
-			<bit name="Bit 2" index="2" />
-			<bit name="Is Tiled" index="3" />
-			<bit name="Bit 4" index="4" />
-			<bit name="Bit 5" index="5" />
-			<bit name="Bit 6" index="6" />
-			<bit name="Bit 7" index="7" />
+		<bitfield8 name="Xbox360 Format Flags" offset="0x9" visible="true">
+			<bit name="Medium Resolution Offset Is Valid" index="0" />
+			<bit name="Pitch (Memory Spacing)" index="1" />
+			<bit name="Byte Order" index="2" />
+			<bit name="Tiled Texture" index="3" />
+			<bit name="Created Correctly (Hack for Bumpmaps)" index="4" />
+			<bit name="High Resolution Offset Is Valid" index="5" />
+			<bit name="Use Interleaved Textures" index="6" />
+			<bit name="Use On Demand Only" index="7" />
 		</bitfield8>
 		<enum16 name="Type" offset="0xA" visible="true">
 			<option name="2D Texture" value="0x0" />
 			<option name="3D Texture" value="0x1" />
 			<option name="Cube Map" value="0x2" />
-			<option name="Unknown" value="0x3" />
+			<option name="Array" value="0x3" />
 		</enum16>
 		<enum16 name="Format" offset="0xC" visible="true">
 			<option name="A8" value="0x0" />
@@ -162,7 +284,15 @@
 		<int16 name="Registration Point x" offset="0x10" visible="true" />
 		<int16 name="Registration Point y" offset="0x12" visible="true" />
 		<int8 name="Mipmap Count" offset="0x14" visible="true" />
-		<int8 name="Unknown" offset="0x15" visible="false" />
+		<enum8 name="Curve" offset="0x15" visible="true">
+			<option name="Unknown" value="0"/>
+			<option name="xRGB (Gamma 2.2)" value="1"/>
+			<option name="Gamma 2.0" value="2"/>
+			<option name="Linear" value="3"/>
+			<option name="Offset Log" value="4"/>
+			<option name="sRGB (Gamma 2.2)" value="5"/>
+			<option name="Rec709 (Gamma 2.2)" value="6"/>
+		</enum8>
 		<int8 name="Unknown" offset="0x16" visible="false" />
 		<int8 name="Unknown" offset="0x17" visible="false" />
 		<int32 name="Pixels Offset" offset="0x18" visible="true" />
@@ -172,7 +302,7 @@
 		<int8 name="Unknown" offset="0x25" visible="false" />
 		<int8 name="Unknown" offset="0x26" visible="false" />
 		<int8 name="Unknown" offset="0x27" visible="false" />
-		<int32 name="Unknown" offset="0x28" visible="false" />
+		<int32 name="Interleaved Texture Index" offset="0x28" visible="true" />
 		<undefined name="Unknown" offset="0x2C" visible="false" />
 	</reflexive>
 	<dataref name="Unknown" offset="0x6C" visible="false" />

@@ -179,7 +179,7 @@
 		</reflexive>
 		<float32 name="Total Probability" offset="0x14" visible="true" />
 	</reflexive>
-	<reflexive name="Materials" offset="0x7C" visible="true" entrySize="0x14">
+	<reflexive name="Model Materials" offset="0x7C" visible="true" entrySize="0x14">
 		<stringid name="Name" offset="0x0" visible="true" />
 		<int16 name="Unused Flags" offset="0x4" visible="false" />
 		<int16 name="Damage Section Index" offset="0x6" visible="true" />
