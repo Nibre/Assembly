@@ -17,11 +17,11 @@
 				         Margin="0,0,0,0" />
                 <TextBlock x:Name="lblYValueName" Text="{Binding YLabel}" ToolTip="Y Value" Style="{DynamicResource GenericTextblock}" Width="10"
 				           VerticalAlignment="Center" Margin="15,0,0,0" />
-				<TextBox x:Name="txtYValue" Text="{Binding Y}" VerticalAlignment="Center" Width="100" Padding="0,0,0,0"
+				<TextBox x:Name="txtYValue" Text="{Binding YVal}" VerticalAlignment="Center" Width="100" Padding="0,0,0,0"
 				         Margin="0,0,0,0" />
                 <TextBlock x:Name="lblZValueName" Text="{Binding ZLabel}" ToolTip="Z Value" Style="{DynamicResource GenericTextblock}" Width="10"
 				           VerticalAlignment="Center" Margin="15,0,0,0" />
-				<TextBox x:Name="txtZValue" Text="{Binding Z}" VerticalAlignment="Center" Width="100" Padding="0,0,0,0"
+				<TextBox x:Name="txtZValue" Text="{Binding ZVal}" VerticalAlignment="Center" Width="100" Padding="0,0,0,0"
 				         Margin="0,0,0,0" />
                 <TextBlock x:Name="lblType" Text="{Binding TypeLabel}" Style="{DynamicResource GenericTextblock}" Width="50"
 				           VerticalAlignment="Center" Margin="20,0,0,0" />
