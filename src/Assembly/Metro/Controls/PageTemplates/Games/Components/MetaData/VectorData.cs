@@ -2,43 +2,99 @@
 
 namespace Assembly.Metro.Controls.PageTemplates.Games.Components.MetaData
 {
-	public class VectorData : ValueField
+    public enum VectorType
+    {
+        Vector2 = 2,
+        Vector3 = 3,
+        Vector4 = 4
+    }
+    public class VectorData : ValueField
 	{
-		private float _x, _y, _z;
+		private float _x, _y, _z, _a;
         private string _labels;
-        private string _xLabel, _yLabel, _zLabel;
+        private string _xLabel, _yLabel, _zLabel, _aLabel;
+        private bool _zVis, _aVis;
         private string _typeLabel;
         private bool _degrees;
 
-        public VectorData(string name, uint offset, uint address, float x, float y, float z, string labels, bool degrees, uint pluginLine)
+        public VectorData(string name, uint offset, uint address, VectorType type, float x, float y, float z, float a, string labels, bool degrees, uint pluginLine)
             : base(name, offset, address, pluginLine)
         {
+            // Vector Components
             _x = x;
             _y = y;
             _z = z;
+            _a = a;
+
+
+            // Visibility for last 2 Components
+            _zVis = _aVis = false;
 
             _labels = labels;
             _degrees = degrees;
             
-            if (_labels.Length < 3)
+            // Optional custom label letters for components
+            if (_labels.Length < (int)type)
             {
                 _xLabel = "x";
                 _yLabel = "y";
                 _zLabel = "z";
+                _aLabel = "a";
             }
             else
             {
-                _xLabel = _labels[0].ToString();
-                _yLabel = _labels[1].ToString();
-                _zLabel = _labels[2].ToString();
+                switch (type)
+                {
+                    case VectorType.Vector4:
+                        _aLabel = _labels[3].ToString();
+                        goto case VectorType.Vector3;
+                    case VectorType.Vector3:
+                        _zLabel = _labels[2].ToString();
+                        goto case VectorType.Vector2;
+                    case VectorType.Vector2:
+                        _yLabel = _labels[1].ToString();
+                        goto default;
+                    default:
+                        _xLabel = _labels[0].ToString();
+                        break;
+                }
+            }
+
+            // Make last 2 Components visible if we need either
+            switch (type)
+            {
+                case VectorType.Vector4:
+                    _aVis = true;
+                    goto case VectorType.Vector3;
+                case VectorType.Vector3:
+                    _zVis = true;
+                    break;
+            }
+
+            // Create our Vector type name
+            _typeLabel = "vector";
+            switch (type)
+            {
+                case VectorType.Vector4:
+                    _typeLabel += "4";
+                    break;
+                case VectorType.Vector3:
+                    _typeLabel += "3";
+                    break;
+                case VectorType.Vector2:
+                    _typeLabel += "2";
+                    break;
             }
 
             if (_degrees)
-                _typeLabel = "vector3D";
+                _typeLabel += "D";
             else
-                _typeLabel = "vector3F";
+                _typeLabel += "F";
         }
         
+
+        // XVal - For exposing the editable 'value' to the Field (so we can switch to Degrees if we want)
+        // X - The true value, for reading/saving from the Cache
         public float XVal
         {
             get
@@ -144,6 +200,42 @@ namespace Assembly.Metro.Controls.PageTemplates.Games.Components.MetaData
             }
         }
 
+        public float AVal
+        {
+            get
+            {
+                if (_degrees)
+                    return (float)(_a * (180 / Math.PI));
+                else
+                    return _a;
+            }
+            set
+            {
+                if (_degrees)
+                    _a = (float)(value * (Math.PI / 180));
+                else
+                    _a = value;
+
+                NotifyPropertyChanged("A");
+                NotifyPropertyChanged("AVal");
+            }
+        }
+
+        public float A
+        {
+            get
+            {
+                return _a;
+            }
+            set
+            {
+                _a = value;
+                NotifyPropertyChanged("A");
+                NotifyPropertyChanged("AVal");
+            }
+        }
+
+        // Labels that we can change
         public string XLabel
         {
             get { return _xLabel; }
@@ -153,6 +245,7 @@ namespace Assembly.Metro.Controls.PageTemplates.Games.Components.MetaData
                 NotifyPropertyChanged("XLabel");
             }
         }
+
         public string YLabel
         {
             get { return _yLabel; }
@@ -162,6 +255,7 @@ namespace Assembly.Metro.Controls.PageTemplates.Games.Components.MetaData
                 NotifyPropertyChanged("YLabel");
             }
         }
+
         public string ZLabel
         {
             get { return _zLabel; }
@@ -172,12 +266,46 @@ namespace Assembly.Metro.Controls.PageTemplates.Games.Components.MetaData
             }
         }
 
+        public string ALabel
+        {
+            get { return _aLabel; }
+            set
+            {
+                _aLabel = value;
+                NotifyPropertyChanged("ALabel");
+            }
+        }
+
+        // Visibility
+        public System.Windows.Visibility ZVis
+        {
+            get
+            {
+                if (_zVis)
+                    return System.Windows.Visibility.Visible;
+                else
+                    return System.Windows.Visibility.Collapsed;
+            }
+        }
+
+        public System.Windows.Visibility AVis
+        {
+            get
+            {
+                if (_aVis)
+                    return System.Windows.Visibility.Visible;
+                else
+                    return System.Windows.Visibility.Collapsed;
+            }
+        }
+
+        // Vector type
         public string TypeLabel
         {
             get { return _typeLabel; }
             set
             {
-                _zLabel = value;
+                _typeLabel = value;
                 NotifyPropertyChanged("TypeLabel");
             }
         }
@@ -189,7 +317,7 @@ namespace Assembly.Metro.Controls.PageTemplates.Games.Components.MetaData
 
 		public override MetaField CloneValue()
 		{
-			return new VectorData(Name, Offset, FieldAddress, _x, _y, _z, _labels, _degrees, base.PluginLine);
+			return new VectorData(Name, Offset, FieldAddress, VectorType.Vector3, _x, _y, _z, _a, _labels, _degrees, base.PluginLine);
 		}
 	}
 }
