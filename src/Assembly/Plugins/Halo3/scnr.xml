@@ -254,8 +254,8 @@
 	<reflexive name="Zone Set Audibility" offset="0x48" visible="true" entrySize="0x64">
 		<int32 name="Door Portal Count" offset="0x0" visible="true" />
 		<int32 name="Room Count" offset="0x4" visible="true" />
-		<float32 name="Room Bounds min" offset="0x8" visible="true" />
-		<float32 name="Room Bounds max" offset="0xC" visible="true" />
+		<float32 name="Room Distance Bounds Min" offset="0x8" visible="true" />
+		<float32 name="Room Distance Bounds Max" offset="0xC" visible="true" />
 		<reflexive name="Encoded Door PAS" offset="0x10" visible="true" entrySize="0x4">
 			<int32 name="Encoded Data" offset="0x0" visible="true" />
 		</reflexive>
@@ -565,12 +565,8 @@
 			<bit name="Bit 30" index="30" />
 			<bit name="Bit 31" index="31" />
 		</bitfield32>
-		<float32 name="Position x" offset="0x8" visible="true" />
-		<float32 name="Position y" offset="0xC" visible="true" />
-		<float32 name="Position z" offset="0x10" visible="true" />
-		<degree name="Rotation i" offset="0x14" visible="true" />
-		<degree name="Rotation j" offset="0x18" visible="true" />
-		<degree name="Rotation k" offset="0x1C" visible="true" />
+		<vector3 name="Position" offset="0x8" visible="true" />
+		<vector3 name="Rotation" offset="0x14" visible="true" labels="ijk" degrees="true"/>
 		<float32 name="Scale" offset="0x20" visible="true" />
 		<comment title="Node Positioning">This block allows you to "pose" this objects nodes. Used normally for dead bodies. The orientations block has an entry for each checked node flag, skipping unchecked ones.
 The blocks labeled [Readable] are modified to make reading/editing the values easier, but as a result the entry counts will be innaccurate, going too far may result in editing the wrong data.
@@ -1426,12 +1422,8 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 			<bit name="Bit 30" index="30" />
 			<bit name="Bit 31" index="31" />
 		</bitfield32>
-		<float32 name="Position x" offset="0x8" visible="true" />
-		<float32 name="Position y" offset="0xC" visible="true" />
-		<float32 name="Position z" offset="0x10" visible="true" />
-		<degree name="Rotation i" offset="0x14" visible="true" />
-		<degree name="Rotation j" offset="0x18" visible="true" />
-		<degree name="Rotation k" offset="0x1C" visible="true" />
+		<vector3 name="Position" offset="0x8" visible="true" />
+		<vector3 name="Rotation" offset="0x14" visible="true" labels="ijk" degrees="true"/>
 		<float32 name="Scale" offset="0x20" visible="true" />
 		<comment title="Node Positioning">This block allows you to "pose" this objects nodes. Used normally for dead bodies. The orientations block has an entry for each checked node flag, skipping unchecked ones.
 The blocks labeled [Readable] are modified to make reading/editing the values easier, but as a result the entry counts will be innaccurate, going too far may result in editing the wrong data.
@@ -1723,12 +1715,8 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 			<bit name="Bit 30" index="30" />
 			<bit name="Bit 31" index="31" />
 		</bitfield32>
-		<float32 name="Position x" offset="0x8" visible="true" />
-		<float32 name="Position y" offset="0xC" visible="true" />
-		<float32 name="Position z" offset="0x10" visible="true" />
-		<degree name="Rotation i" offset="0x14" visible="true" />
-		<degree name="Rotation j" offset="0x18" visible="true" />
-		<degree name="Rotation k" offset="0x1C" visible="true" />
+		<vector3 name="Position" offset="0x8" visible="true" />
+		<vector3 name="Rotation" offset="0x14" visible="true" labels="ijk" degrees="true"/>
 		<float32 name="Scale" offset="0x20" visible="true" />
 		<comment title="Node Positioning">This block allows you to "pose" this objects nodes. Used normally for dead bodies. The orientations block has an entry for each checked node flag, skipping unchecked ones.
 The blocks labeled [Readable] are modified to make reading/editing the values easier, but as a result the entry counts will be innaccurate, going too far may result in editing the wrong data.
@@ -2875,12 +2863,8 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 			<bit name="Bit 30" index="30" />
 			<bit name="Bit 31" index="31" />
 		</bitfield32>
-		<float32 name="Position x" offset="0x8" visible="true" />
-		<float32 name="Position y" offset="0xC" visible="true" />
-		<float32 name="Position z" offset="0x10" visible="true" />
-		<degree name="Rotation i" offset="0x14" visible="true" />
-		<degree name="Rotation j" offset="0x18" visible="true" />
-		<degree name="Rotation k" offset="0x1C" visible="true" />
+		<vector3 name="Position" offset="0x8" visible="true" />
+		<vector3 name="Rotation" offset="0x14" visible="true" labels="ijk" degrees="true"/>
 		<float32 name="Scale" offset="0x20" visible="true" />
 		<comment title="Node Positioning">This block allows you to "pose" this objects nodes. Used normally for dead bodies. The orientations block has an entry for each checked node flag, skipping unchecked ones.
 The blocks labeled [Readable] are modified to make reading/editing the values easier, but as a result the entry counts will be innaccurate, going too far may result in editing the wrong data.
@@ -3349,12 +3333,8 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 			<bit name="Bit 30" index="30" />
 			<bit name="Bit 31" index="31" />
 		</bitfield32>
-		<float32 name="Position x" offset="0x8" visible="true" />
-		<float32 name="Position y" offset="0xC" visible="true" />
-		<float32 name="Position z" offset="0x10" visible="true" />
-		<degree name="Rotation i" offset="0x14" visible="true" />
-		<degree name="Rotation j" offset="0x18" visible="true" />
-		<degree name="Rotation k" offset="0x1C" visible="true" />
+		<vector3 name="Position" offset="0x8" visible="true" />
+		<vector3 name="Rotation" offset="0x14" visible="true" labels="ijk" degrees="true"/>
 		<float32 name="Scale" offset="0x20" visible="true" />
 		<comment title="Node Positioning">This block allows you to "pose" this objects nodes. Used normally for dead bodies. The orientations block has an entry for each checked node flag, skipping unchecked ones.
 The blocks labeled [Readable] are modified to make reading/editing the values easier, but as a result the entry counts will be innaccurate, going too far may result in editing the wrong data.
@@ -3894,11 +3874,8 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 		<uint8 name="Starting Firebomb Grenade Count" offset="0x53" visible="true" />
 	</reflexive>
 	<reflexive name="Player Starting Locations" offset="0x254" visible="true" entrySize="0x18">
-		<float32 name="Position x" offset="0x0" visible="true" />
-		<float32 name="Position y" offset="0x4" visible="true" />
-		<float32 name="Position z" offset="0x8" visible="true" />
-		<degree name="Facing y" offset="0xC" visible="true" />
-		<degree name="Facing p" offset="0x10" visible="true" />
+		<vector3 name="Position" offset="0x0" visible="true" />
+		<vector2 name="Facing" offset="0xC" visible="true" labels="yp" degrees="true"/>
 		<int16 name="Insertion Point Index" offset="0x14" visible="true" />
 		<enum16 name="Campaign Player Type" offset="0x16" visible="true">
 			<option name="Masterchief" value="0x0" />
@@ -3914,18 +3891,10 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 		<int16 name="Object Name" offset="0x4" visible="true" />
 		<int16 name="Runtime Node Index" offset="0x6" visible="true" />
 		<stringId name="Node Name" offset="0x8" visible="true" />
-		<float32 name="Forward i" offset="0xC" visible="true" />
-		<float32 name="Forward j" offset="0x10" visible="true" />
-		<float32 name="Forward k" offset="0x14" visible="true" />
-		<float32 name="Up i" offset="0x18" visible="true" />
-		<float32 name="Up j" offset="0x1C" visible="true" />
-		<float32 name="Up k" offset="0x20" visible="true" />
-		<float32 name="Position x" offset="0x24" visible="true" />
-		<float32 name="Position y" offset="0x28" visible="true" />
-		<float32 name="Position z" offset="0x2C" visible="true" />
-		<float32 name="Extents x" offset="0x30" visible="true" />
-		<float32 name="Extents y" offset="0x34" visible="true" />
-		<float32 name="Extents z" offset="0x38" visible="true" />
+		<vector3 name="Forward" offset="0xC" visible="true" labels="ijk" />
+		<vector3 name="Up" offset="0x18" visible="true" labels="ijk" />
+		<vector3 name="Position" offset="0x24" visible="true" />
+		<vector3 name="Extents" offset="0x30" visible="true" />
 		<float32 name="Bounding Radius" offset="0x3C" visible="true" />
 		<comment title="Bounding Radius Calculation">It's the distance from the Center to a Corner
 	((Extents.x/2)^2+(Extents.y/2)^2+(Extents.z/2)^2)^0.5
@@ -5285,9 +5254,7 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 		</reflexive>
 		<int32 name="BSP Checksum" offset="0x34" visible="true" />
 		<reflexive name="Cluster Centroids" offset="0x38" visible="true" entrySize="0xC">
-			<float32 name="Centroid X" offset="0x0" visible="true" />
-			<float32 name="Centroid Y" offset="0x4" visible="true" />
-			<float32 name="Centroid Z" offset="0x8" visible="true" />
+			<vector3 name="Centroid" offset="0x0" visible="true" />
 		</reflexive>
 		<reflexive name="Unknown" offset="0x44" visible="false" entrySize="0x4">
 			<int16 name="Unknown" offset="0x0" visible="false" />
@@ -5444,9 +5411,7 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 				<bit name="Bit 30" index="30" />
 				<bit name="Bit 31" index="31" />
 			</bitfield32>
-			<float32 name="Position x" offset="0x10" visible="true" />
-			<float32 name="Position y" offset="0x14" visible="true" />
-			<float32 name="Position z" offset="0x18" visible="true" />
+			<vector3 name="Position" offset="0x10" visible="true" />
 			<float32 name="Lower Height" offset="0x1C" visible="true" />
 			<float32 name="Upper Height" offset="0x20" visible="true" />
 			<float32 name="Inner Radius" offset="0x24" visible="true" />
@@ -5582,12 +5547,8 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 			<bit name="Bit 30" index="30" />
 			<bit name="Bit 31" index="31" />
 		</bitfield32>
-		<float32 name="Position x" offset="0x8" visible="true" />
-		<float32 name="Position y" offset="0xC" visible="true" />
-		<float32 name="Position z" offset="0x10" visible="true" />
-		<degree name="Rotation i" offset="0x14" visible="true" />
-		<degree name="Rotation j" offset="0x18" visible="true" />
-		<degree name="Rotation k" offset="0x1C" visible="true" />
+		<vector3 name="Position" offset="0x8" visible="true" />
+		<vector3 name="Rotation" offset="0x14" visible="true" labels="ijk" degrees="true"/>
 		<float32 name="Scale" offset="0x20" visible="true" />
 		<comment title="Node Positioning">This block allows you to "pose" this objects nodes. Used normally for dead bodies. The orientations block has an entry for each checked node flag, skipping unchecked ones.
 The blocks labeled [Readable] are modified to make reading/editing the values easier, but as a result the entry counts will be innaccurate, going too far may result in editing the wrong data.
@@ -5856,9 +5817,7 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 		<float32 name="Ecology Margin" offset="0xC" visible="true" />
 		<reflexive name="Sources" offset="0x10" visible="true" entrySize="0x24">
 			<int32 name="Unknown" offset="0x0" visible="false" />
-			<float32 name="Position x" offset="0x4" visible="true" />
-			<float32 name="Position y" offset="0x8" visible="true" />
-			<float32 name="Position z" offset="0xC" visible="true" />
+			<vector3 name="Position" offset="0x4" visible="true" />
 			<degree name="Starting y" offset="0x10" visible="true" />
 			<degree name="Starting p" offset="0x14" visible="true" />
 			<float32 name="Radius" offset="0x18" visible="true" />
@@ -5869,9 +5828,7 @@ DO NOT USE THE BLOCK REALLOCATOR ON THE [READABLE] BLOCKS!</comment>
 			<int8 name="Unknown" offset="0x23" visible="false" />
 		</reflexive>
 		<reflexive name="Sinks" offset="0x1C" visible="false" entrySize="0x10">
-			<float32 name="Position x" offset="0x0" visible="true" />
-			<float32 name="Position y" offset="0x4" visible="true" />
-			<float32 name="Position z" offset="0x8" visible="true" />
+			<vector3 name="Position" offset="0x0" visible="true" />
 			<float32 name="Radius" offset="0xC" visible="true" />
 		</reflexive>
 		<float32 name="Production Frequency min" offset="0x28" visible="true" />
