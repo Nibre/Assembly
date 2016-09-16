@@ -157,13 +157,19 @@ namespace Blamite.Injection
 
 		public void VisitUndefined(string name, uint offset, bool visible, uint pluginLine)
 		{
-		}
+        }
+        public void VisitVector2(string name, uint offset, bool visible, string labels, bool degrees, uint pluginLine)
+        {
+        }
 
-		public void VisitVector3(string name, uint offset, bool visible, string labels, bool degrees, uint pluginLine)
+        public void VisitVector3(string name, uint offset, bool visible, string labels, bool degrees, uint pluginLine)
 		{
-		}
+        }
+        public void VisitVector4(string name, uint offset, bool visible, string labels, bool degrees, uint pluginLine)
+        {
+        }
 
-		public void VisitDegree(string name, uint offset, bool visible, uint pluginLine)
+        public void VisitDegree(string name, uint offset, bool visible, uint pluginLine)
 		{
 		}
 

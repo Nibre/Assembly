@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             mc:Ignorable="d" Width="650" Height="28"
+             mc:Ignorable="d" Width="785" Height="28"
              HorizontalAlignment="Left">
 	<Grid>
 		<StackPanel Orientation="Vertical" VerticalAlignment="Center">
@@ -11,17 +11,21 @@
 				<TextBlock x:Name="lblValueName" Text="{Binding Name}" ToolTip="{Binding Name}"
 				           Style="{DynamicResource GenericTextblock}" Width="180" VerticalAlignment="Center" Margin="0,0,0,0"
 				           TextTrimming="CharacterEllipsis" />
-				<TextBlock x:Name="lblXValueName" Text="{Binding XLabel}" ToolTip="X Value" Style="{DynamicResource GenericTextblock}" Width="10"
+                <TextBlock x:Name="lblXValueName" Text="{Binding XLabel}" ToolTip="{Binding XLabel}" Style="{DynamicResource GenericTextblock}" Width="10"
 				           Margin="10,0,0,0" VerticalAlignment="Center" />
                 <TextBox x:Name="txtXValue" Text="{Binding XVal}" VerticalAlignment="Center" Width="100" Padding="0,0,0,0"
 				         Margin="0,0,0,0" />
-                <TextBlock x:Name="lblYValueName" Text="{Binding YLabel}" ToolTip="Y Value" Style="{DynamicResource GenericTextblock}" Width="10"
+                <TextBlock x:Name="lblYValueName" Text="{Binding YLabel}" ToolTip="{Binding YLabel}" Style="{DynamicResource GenericTextblock}" Width="10"
 				           VerticalAlignment="Center" Margin="15,0,0,0" />
 				<TextBox x:Name="txtYValue" Text="{Binding YVal}" VerticalAlignment="Center" Width="100" Padding="0,0,0,0"
 				         Margin="0,0,0,0" />
-                <TextBlock x:Name="lblZValueName" Text="{Binding ZLabel}" ToolTip="Z Value" Style="{DynamicResource GenericTextblock}" Width="10"
+                <TextBlock Visibility="{Binding ZVis}" x:Name="lblZValueName" Text="{Binding ZLabel}" ToolTip="{Binding ZLabel}" Style="{DynamicResource GenericTextblock}" Width="10"
 				           VerticalAlignment="Center" Margin="15,0,0,0" />
-				<TextBox x:Name="txtZValue" Text="{Binding ZVal}" VerticalAlignment="Center" Width="100" Padding="0,0,0,0"
+                <TextBox Visibility="{Binding ZVis}" x:Name="txtZValue" Text="{Binding ZVal}" VerticalAlignment="Center" Width="100" Padding="0,0,0,0"
+				         Margin="0,0,0,0" />
+                <TextBlock Visibility="{Binding AVis}" x:Name="lblAValueName" Text="{Binding ALabel}" ToolTip="{Binding ALabel}" Style="{DynamicResource GenericTextblock}" Width="10"
+				           VerticalAlignment="Center" Margin="15,0,0,0" />
+                <TextBox Visibility="{Binding AVis}" x:Name="txtAValue" Text="{Binding AVal}" VerticalAlignment="Center" Width="100" Padding="0,0,0,0"
 				         Margin="0,0,0,0" />
                 <TextBlock x:Name="lblType" Text="{Binding TypeLabel}" Style="{DynamicResource GenericTextblock}" Width="50"
 				           VerticalAlignment="Center" Margin="20,0,0,0" />

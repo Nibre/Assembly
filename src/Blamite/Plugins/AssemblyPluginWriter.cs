@@ -97,14 +97,24 @@ namespace Blamite.Plugins
 		public void VisitUndefined(string name, uint offset, bool visible, uint pluginLine)
 		{
 			WriteBasicValue("undefined", name, offset, visible);
-		}
+        }
 
-		public void VisitVector3(string name, uint offset, bool visible, string labels, bool degrees, uint pluginLine)
+        public void VisitVector2(string name, uint offset, bool visible, string labels, bool degrees, uint pluginLine)
+        {
+            WriteBasicValue("vector2", name, offset, visible);
+        }
+
+        public void VisitVector3(string name, uint offset, bool visible, string labels, bool degrees, uint pluginLine)
 		{
 			WriteBasicValue("vector3", name, offset, visible);
-		}
+        }
 
-		public void VisitDegree(string name, uint offset, bool visible, uint pluginLine)
+        public void VisitVector4(string name, uint offset, bool visible, string labels, bool degrees, uint pluginLine)
+        {
+            WriteBasicValue("vector4", name, offset, visible);
+        }
+
+        public void VisitDegree(string name, uint offset, bool visible, uint pluginLine)
 		{
 			WriteBasicValue("degree", name, offset, visible);
 		}

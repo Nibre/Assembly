@@ -177,10 +177,16 @@ namespace Blamite.Plugins
 				case "degree":
 					visitor.VisitFloat32(name, offset, visible, pluginLine);
 					break;
-				case "vector3":
+                case "vector2":
+                    visitor.VisitVector2(name, offset, visible, ReadVectorLabels(reader), ReadVectorDegrees(reader), pluginLine);
+                    break;
+                case "vector3":
 					visitor.VisitVector3(name, offset, visible, ReadVectorLabels(reader), ReadVectorDegrees(reader), pluginLine);
 					break;
-				case "stringid":
+                case "vector4":
+                    visitor.VisitVector4(name, offset, visible, ReadVectorLabels(reader), ReadVectorDegrees(reader), pluginLine);
+                    break;
+                case "stringid":
 					visitor.VisitStringID(name, offset, visible, pluginLine);
 					break;
 				case "tag":
@@ -501,7 +507,7 @@ namespace Blamite.Plugins
 
         private static string ReadVectorLabels(XmlReader reader)
         {
-            string labels = "xyz";
+            string labels = "xyza";
             if (reader.MoveToAttribute("labels"))
                 labels = reader.Value.ToLower();
 

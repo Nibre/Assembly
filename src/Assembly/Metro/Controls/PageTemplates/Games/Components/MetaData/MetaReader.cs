@@ -282,15 +282,16 @@ namespace Assembly.Metro.Controls.PageTemplates.Games.Components.MetaData
 		{
 			SeekToOffset(field.Offset);
 			field.Value = _reader.ReadFloat();
-		}
+        }
 
-		public void VisitVector(VectorData field)
+        public void VisitVector(VectorData field)
 		{
 			SeekToOffset(field.Offset);
 			field.X = _reader.ReadFloat();
 			field.Y = _reader.ReadFloat();
 			field.Z = _reader.ReadFloat();
-		}
+            field.A = _reader.ReadFloat();
+        }
 
 		public void VisitDegree(DegreeData field)
 		{

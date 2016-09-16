@@ -128,10 +128,33 @@ namespace Assembly.Metro.Controls.PageTemplates.Games.Components
 			RegisterMetaTag("enum8", "8-bit enumeration value");
 			RegisterMetaTag("enum16", "8-bit enumeration value");
 			RegisterMetaTag("enum32", "8-bit enumeration value");
-			RegisterMetaTag("vector3", "3D vector of 32-bit floating point values");
-			RegisterMetaTag("degree", "Radian value that should be converted to/from degrees");
+            RegisterMetaTag("degree", "Radian value that should be converted to/from degrees");
 
-			CompletableXMLTag color = RegisterMetaTag("color", "Integer color value");
+            var bit = new CompletableXMLTag("bit", "Bitfield child Bit");
+            bit.RegisterAttribute(new CompletableXMLAttribute("name", "The field's name (required)"));
+            bit.RegisterAttribute(new CompletableXMLAttribute("index", "The Bitfield Bit Index this Bit watches"));
+            _completer.RegisterTag(bit);
+
+            var option = new CompletableXMLTag("option", "Enum child Option");
+            option.RegisterAttribute(new CompletableXMLAttribute("name", "The field's name (required)"));
+            option.RegisterAttribute(new CompletableXMLAttribute("value", "The Enum Value this option wants to claim"));
+            _completer.RegisterTag(option);
+
+            CompletableXMLTag vec2 = RegisterMetaTag("vector2", "2D vector of 32-bit floating point values");
+            CompletableXMLTag vec3 = RegisterMetaTag("vector3", "3D vector of 32-bit floating point values");
+            CompletableXMLTag vec4 = RegisterMetaTag("vector4", "4D vector of 32-bit floating point values");
+            var labels = new CompletableXMLAttribute("labels", "Alternate dimension letters for value field labeling (optional, default=\"xyza\"");
+            var degrees = new CompletableXMLAttribute("degrees", "Whether Vector values should be converted to/from degrees (optional, default=false)");
+            degrees.RegisterValue(new CompletableXMLValue("true", "Convert Vector values to degrees"));
+            degrees.RegisterValue(new CompletableXMLValue("false", "Leave Vector values as floating-points"));
+            vec2.RegisterAttribute(labels);
+            vec2.RegisterAttribute(degrees);
+            vec3.RegisterAttribute(labels);
+            vec3.RegisterAttribute(degrees);
+            vec4.RegisterAttribute(labels);
+            vec4.RegisterAttribute(degrees);
+
+            CompletableXMLTag color = RegisterMetaTag("color", "Integer color value");
 			CompletableXMLTag colorf = RegisterMetaTag("colorf", "Floating-point color value");
 			var colorFormat = new CompletableXMLAttribute("format",
 				"A string containing the characters 'a', 'r', 'g', and 'b' which describes the format of the color (required)");
