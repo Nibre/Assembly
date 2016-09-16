@@ -178,7 +178,7 @@ namespace Blamite.Plugins
 					visitor.VisitFloat32(name, offset, visible, pluginLine);
 					break;
 				case "vector3":
-					visitor.VisitVector3(name, offset, visible, pluginLine);
+					visitor.VisitVector3(name, offset, visible, ReadVectorLabels(reader), pluginLine);
 					break;
 				case "stringid":
 					visitor.VisitStringID(name, offset, visible, pluginLine);
@@ -497,9 +497,18 @@ namespace Blamite.Plugins
 			}
 
 			return format;
-		}
+        }
 
-		private void ReadReflexive(XmlReader reader, string name, uint offset, bool visible, IPluginVisitor visitor,
+        private static string ReadVectorLabels(XmlReader reader)
+        {
+            string labels = "xyz";
+            if (reader.MoveToAttribute("labels"))
+                labels = reader.Value.ToLower();
+
+            return labels;
+        }
+
+        private void ReadReflexive(XmlReader reader, string name, uint offset, bool visible, IPluginVisitor visitor,
 			uint pluginLine)
 		{
 			uint entrySize = 0;

@@ -159,7 +159,7 @@ namespace Blamite.Injection
 		{
 		}
 
-		public void VisitVector3(string name, uint offset, bool visible, uint pluginLine)
+		public void VisitVector3(string name, uint offset, bool visible, string labels, uint pluginLine)
 		{
 		}
 

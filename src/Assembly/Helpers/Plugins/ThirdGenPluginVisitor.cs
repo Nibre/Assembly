@@ -65,10 +65,10 @@ namespace Assembly.Helpers.Plugins
 				AddValue(new CommentData(title, text, pluginLine));
 		}
 
-		public void VisitVector3(string name, uint offset, bool visible, uint pluginLine)
+		public void VisitVector3(string name, uint offset, bool visible, string labels, uint pluginLine)
 		{
 			if (visible || _showInvisibles)
-				AddValue(new VectorData(name, offset, 0, 0, 0, 0, pluginLine));
+				AddValue(new VectorData(name, offset, 0, 0, 0, 0, labels, pluginLine));
 		}
 
 		public void VisitDegree(string name, uint offset, bool visible, uint pluginLine)
