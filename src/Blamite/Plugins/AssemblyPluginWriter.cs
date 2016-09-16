@@ -99,7 +99,7 @@ namespace Blamite.Plugins
 			WriteBasicValue("undefined", name, offset, visible);
 		}
 
-		public void VisitVector3(string name, uint offset, bool visible, string labels, uint pluginLine)
+		public void VisitVector3(string name, uint offset, bool visible, string labels, bool degrees, uint pluginLine)
 		{
 			WriteBasicValue("vector3", name, offset, visible);
 		}
